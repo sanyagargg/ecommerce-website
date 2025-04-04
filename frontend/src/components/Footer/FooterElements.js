@@ -5,6 +5,36 @@ export const FooterContainer = styled.footer`
     background-color: #3D0D01;
 `
 
+export const ISOStrip = styled.div`
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    text-align: center;
+    padding: 16px 24px;  // Increased padding
+    font-size: 16px;     // Increased font size
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    img {
+        height: 28px; // Slightly larger image
+        width: auto;
+    }
+
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+        gap: 6px;
+        font-size: 15px;
+
+        img {
+            height: 24px;
+        }
+    }
+`;
+
+
 export const FooterWrap = styled.div`
     padding: 48px 24px;
     display: flex;

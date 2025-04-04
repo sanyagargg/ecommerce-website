@@ -1,0 +1,1 @@
+//Sends email notifications, this is where nodemailer will go

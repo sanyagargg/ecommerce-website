@@ -13,21 +13,23 @@ import {
     SocialLogo,
     SocialIcons,
     WebsiteRights,
-    SocialIconLink
+    SocialIconLink,
+    ISOStrip
 } from './FooterElements'
 import { animateScroll as scroll } from 'react-scroll'
 
-// To link outside of the website, use normal a tags
-
 const Footer = () => {
 
-    // Function from react-scroll
     const toggleHome = () => {
         scroll.scrollToTop();
     }
 
     return (
         <FooterContainer>
+            <ISOStrip>
+                <img src="/iso.png" alt="ISO Certified" />
+                An ISO 9001:2015 certified manufacturer and supplier of customized Transformer.
+            </ISOStrip>
             <FooterWrap>
                 <FooterLinksContainer>
                     <FooterLinksWrapper>

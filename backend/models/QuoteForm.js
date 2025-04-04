@@ -1,0 +1,1 @@
+//MongoDB schema for storing quote requests
