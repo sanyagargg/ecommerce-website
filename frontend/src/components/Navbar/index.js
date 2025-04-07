@@ -61,20 +61,6 @@ const Navbar = ({ toggle }) => {
               </NavLinks>
             </NavItem>
 
-            {/* <NavItem>
-              <NavLinks
-                to="ceo"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                activeClass="active"
-              >
-                Meet the CEO
-              </NavLinks>
-            </NavItem>
-            */}
-
             <NavItem>
               <NavLinks
                 to="products"
@@ -84,7 +70,21 @@ const Navbar = ({ toggle }) => {
                 exact="true"
                 activeClass="active"
               >
-                Products      
+                Products
+              </NavLinks>
+            </NavItem>
+            
+
+            <NavItem>
+              <NavLinks
+                to="gallery"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                activeClass="active"
+              >
+                Gallery    
               </NavLinks>
             </NavItem>
 
@@ -117,7 +117,7 @@ const Navbar = ({ toggle }) => {
 
           <NavBtn>
             <SearchIconWrapper>
-              <FaSearch />
+              {/* <FaSearch /> */}
             </SearchIconWrapper>
           </NavBtn>
         </NavbarContainer>

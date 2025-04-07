@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
-export const ServicesContainer = styled.div`
+export const GalleryContainer = styled.div`
     height: 860px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #000;
+    <GalleryContainer id='gallery'>
+
 
     @media screen and (max-width: 768px) {
         height: 1300px;
@@ -17,7 +19,7 @@ export const ServicesContainer = styled.div`
     }
 `
 
-export const ServicesWrapper = styled.div`
+export const GalleryWrapper = styled.div`
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
@@ -36,7 +38,7 @@ export const ServicesWrapper = styled.div`
     }
 `
 
-export const ServicesCard = styled.div`
+export const GalleryCard = styled.div`
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -55,13 +57,13 @@ export const ServicesCard = styled.div`
     }
 `
 
-export const ServicesIcon = styled.img`
+export const GalleryIcon = styled.img`
     height: 160px;
     width: 160px;
     margin-bottom: 10px;
 `
 
-export const ServicesH1 = styled.h1`
+export const GalleryH1 = styled.h1`
     font-size: 2.5rem;
     color: #fff;
     margin-bottom: 104px;
@@ -71,12 +73,12 @@ export const ServicesH1 = styled.h1`
     }
 `
 
-export const ServicesH2 = styled.h2`
+export const GalleryH2 = styled.h2`
     font-size: 1rem;
     margin-bottom: 10px;
 `
 
-export const ServicesP = styled.p`
+export const GalleryP = styled.p`
     font-size: 1rem;
     text-align: center;
 `

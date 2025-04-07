@@ -30,9 +30,6 @@ const About = () => {
       <AboutInfoSection {...aboutObj5}/>
       <AboutInfoSection {...aboutObj6}/>
       <AboutInfoSection {...aboutObj7}/>
-      <AboutInfoSection {...aboutObj8}/>
-      <AboutInfoSection {...aboutObj9}/>
-      <AboutInfoSection {...aboutObj10}/>
       <Footer />
     </>
   );

@@ -38,15 +38,29 @@ const AboutInfoSection = ({
                     <Column2>
                         <TextWrapper>
                         {Array.isArray(description) ? (
-                        <ul>
-                            {description.map((point, index) => (
-                            <li key={index} style={{ marginBottom: '10px' }}>
-                                <Subtitle darkText={darkText}>{point}</Subtitle>
-                            </li>
-                            ))}
-                        </ul>
+                        description.map((line, idx) => (
+                            <p
+                            key={idx}
+                            style={{
+                                marginBottom: '10px',
+                                fontSize: '1.1rem', // Adjust as needed (e.g., '18px' or '1.2rem')
+                                lineHeight: '1.6',
+                                color: darkText ? '#010606' : '#fff',
+                            }}
+                            >
+                            {line}
+                            </p>
+                        ))
                         ) : (
-                        <Subtitle darkText={darkText}>{description}</Subtitle>
+                        <p
+                            style={{
+                            fontSize: '1.1rem',
+                            lineHeight: '1.6',
+                            color: darkText ? '#010606' : '#fff',
+                            }}
+                        >
+                            {description}
+                        </p>
                         )}
 
                         </TextWrapper>

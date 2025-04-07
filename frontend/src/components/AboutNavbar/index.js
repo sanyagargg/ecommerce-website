@@ -51,9 +51,6 @@ const AboutNavbar = () => {
           <SidebarItem onClick={() => handleScroll('aboutObj5')}>Manufacturing Capabilities</SidebarItem>
           <SidebarItem onClick={() => handleScroll('aboutObj6')}>Technical Capabilities</SidebarItem>
           <SidebarItem onClick={() => handleScroll('aboutObj7')}>Industries Served</SidebarItem>
-          <SidebarItem onClick={() => handleScroll('aboutObj8')}>Infrastructure</SidebarItem>
-          <SidebarItem onClick={() => handleScroll('aboutObj9')}>Operations Overview</SidebarItem>
-          <SidebarItem onClick={() => handleScroll('aboutObj10')}>List of Customers</SidebarItem>
         </SidebarMenu>
       </Sidebar>
     </>
