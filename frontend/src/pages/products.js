@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import ProductNavbar from '../components/ProductsNavbar';
+import HeroSection from '../components/ProductsHeroSection';
+import Footer from '../components/Footer'
 
-function Products() {
+const Product = () => {
   return (
-    <div>products</div>
-  )
-}
+    <>
+      <ProductNavbar />
+      <HeroSection />
+      <Footer />
+    </>
+  );
+};
 
-export default Products
+export default Product;

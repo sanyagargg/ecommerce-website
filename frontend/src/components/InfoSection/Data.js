@@ -1,5 +1,5 @@
 import aboutImage from '../../images/aboutus.jpg';
-import meetCEO from '../../images/ceo.jpg';
+import productimage from '../../images/products.png';
 
 export const homeObjOne = {
     id: 'about',
@@ -25,12 +25,12 @@ export const homeObjOne = {
     lightText: false,
     lightTextDesc: false,
     topLine: 'Products',
-    headline: 'Products',
-    description: 'Over 27+ years of extensive experience in Manufacturing facility set up & Management, Profit Optimization, Production Planning, Cost Reductions, Quality Assurance, Product Development, TPM, TQM etc. Currently working with Charismatic Electronics as CEO. A keen strategist and planner with skills in conceptualizing and effecting process initiatives to enhance plant efficiency and productivity. Demonstrated abilities in working on initiatives, thereby bringing down equipment breakdown & achieving annual costs savings. Deft in handling the complete product development operations entailing planning, testing, inspection & and ensuring of quality assurance. Possess in depth knowledge of quality systems ISO 9001, IATF 16949, Kaizen, TPM, TQM etc .Excellent communicator with an analytical bent of mind and ability to lead a team under extreme conditions as well.',
-    buttonLabel: 'Learn More',
+    headline: 'Our Products',
+    description: 'Our products are crafted using the highest quality components and the latest technology, adhering to industry standards. They are meticulously engineered to offer exceptional strength and optimal performance. Our quality controllers rigorously test them across various parameters to ensure they meet the highest standards of excellence.',
+    buttonLabel: 'View Products',
     imgStart: true,
-    img: meetCEO,
-    alt: 'CEO of Charismatic Electronics',
+    img: productimage,
+    alt: 'products',
     dark: false,
     primary: false,
     darkText: true,
@@ -65,10 +65,8 @@ export const homeObjFour = {
     lightTextDesc: true,
     topLine: 'Get a Quote',
     headline: 'Have something specific in mind?',
-    description: 'We aspire to be the trusted partner for businesses worldwide, providing advanced solutions such as SMPS Transformers, Toroidal Coils, Drum Coil Inductors, Power Inductors, and Return Line Filters. Through our commitment to innovation, sustainability, and unmatched craftsmanship, we aim to drive progress across industries, from renewable energy to advanced manufacturing and beyond.',
-    buttonLabel: 'Know More',
+    description: 'Thank you for visiting CE online. Please use the form to get in touch with us. If you have a specific design need, please mention that in your submission and our representative will reach out to you soon.',
     imgStart: false,
-    img: aboutImage,
     alt: 'Aboutus',
     dark: true,
     primary: true,
