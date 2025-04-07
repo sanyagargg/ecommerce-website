@@ -61,7 +61,7 @@ const Navbar = ({ toggle }) => {
               </NavLinks>
             </NavItem>
 
-            <NavItem>
+            {/* <NavItem>
               <NavLinks
                 to="ceo"
                 smooth={true}
@@ -73,6 +73,7 @@ const Navbar = ({ toggle }) => {
                 Meet the CEO
               </NavLinks>
             </NavItem>
+            */}
 
             <NavItem>
               <NavLinks

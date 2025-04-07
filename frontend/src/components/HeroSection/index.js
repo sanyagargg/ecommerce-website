@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// pexels.com for free stock videos
+import { Link as RouterLink } from 'react-router-dom'
 import Video from '../../videos/video.mp4'
 import {
     HeroContainer,
@@ -16,8 +16,7 @@ import {
 import { Button } from '../ButtonElement'
 
 const HeroSection = () => {
-
-    const [ hover, setHover ] = useState(false)
+    const [hover, setHover] = useState(false)
 
     const onHover = () => {
         setHover(!hover)
@@ -26,29 +25,23 @@ const HeroSection = () => {
     return (
         <HeroContainer id="home">
             <HeroBg>
-                <VideoBg autoPlay loop muted src={Video} type='video/mp4'/>
+                <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
             </HeroBg>
             <HeroContent>
-                <HeroH1 className='text-3xl'> Charismatic Electronics </HeroH1>
-                <HeroP> 
-                    "Wired for Excellence."
-                </HeroP>
+                <HeroH1 className='text-3xl'>Charismatic Electronics</HeroH1>
+                <HeroP>"Wired for Excellence."</HeroP>
                 <HeroBtnWrapper>
-                    <Button 
-                        to="signup" 
-                        onMouseEnter={ onHover } 
-                        onMouseLeave={ onHover }
-                        primary="true"
-                        dark="true"
-                        smooth={true}
-                        duration={500}
-                        spy={true}
-                        activeClass='active'
-                        exact='true'
-                        > 
-                        View Our Products 
-                        {hover ? <ArrowForward/> : <ArrowRight/>} 
-                    </Button>
+                    <RouterLink to="/products" style={{ textDecoration: 'none' }}>
+                        <Button
+                            as="span"
+                            onMouseEnter={onHover}
+                            onMouseLeave={onHover}
+                            primary="true"
+                            dark="true"
+                        >
+                            View Our Products {hover ? <ArrowForward /> : <ArrowRight />}
+                        </Button>
+                    </RouterLink>
                 </HeroBtnWrapper>
             </HeroContent>
         </HeroContainer>

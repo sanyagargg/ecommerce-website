@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import { 
     InfoContainer,
     InfoWrapper,
@@ -26,6 +27,7 @@ const InfoSection = ({
     darkText, 
     description, 
     buttonLabel, 
+    buttonLink,
     img, 
     alt,
     primary,
@@ -33,18 +35,18 @@ const InfoSection = ({
     dark2,
     externalLink,
     isCircular,
-    isMap // New prop to check if it's a Google Map
+    isMap,
+    bgImage // 🆕 New prop
 }) => {
     return (
-        <InfoContainer lightBg={lightBg} id={id}>
+        <InfoContainer lightBg={lightBg} bgImage={bgImage} id={id}>
             <InfoWrapper>
                 <InfoRow imgStart={imgStart}>
-                    {/* Left Side - Text Content */}
+                    {/* Text Column */}
                     <Column1>
                         <TextWrapper>
                             <TopLine>{topLine}</TopLine>
                             <Heading lightText={lightText}>{headline}</Heading>
-                            {/* Display description or contact info */}
                             {id === 'contact' ? (
                                 <Subtitle darkText={darkText}>
                                     <strong>Email:</strong> charismaticelectronics@gmail.com<br />
@@ -53,7 +55,7 @@ const InfoSection = ({
                             ) : (
                                 <Subtitle darkText={darkText}>{description}</Subtitle>
                             )}
-                            
+
                             {/* Show button unless it's the Contact section */}
                             {id !== 'contact' && buttonLabel && (
                                 <BtnWrap>
@@ -68,27 +70,42 @@ const InfoSection = ({
                                                 {buttonLabel}
                                             </Button>
                                         </a>
+                                    ) : buttonLink?.startsWith('/') ? (
+                                        <RouterLink to={buttonLink}>
+                                            <Button
+                                                as="span"
+                                                primary={primary ? 1 : 0}
+                                                dark={dark ? 1 : 0}
+                                                dark2={dark2 ? 1 : 0}
+                                            >
+                                                {buttonLabel}
+                                            </Button>
+                                        </RouterLink>
                                     ) : (
-                                        <Button
-                                            to="home"
+                                        <ScrollLink
+                                            to={buttonLink}
                                             smooth={true}
                                             duration={500}
                                             spy={true}
                                             exact="true"
                                             offset={-80}
-                                            primary={primary ? 1 : 0}
-                                            dark={dark ? 1 : 0}
-                                            dark2={dark2 ? 1 : 0}
                                         >
-                                            {buttonLabel}
-                                        </Button>
+                                            <Button
+                                                as="span"
+                                                primary={primary ? 1 : 0}
+                                                dark={dark ? 1 : 0}
+                                                dark2={dark2 ? 1 : 0}
+                                            >
+                                                {buttonLabel}
+                                            </Button>
+                                        </ScrollLink>
                                     )}
                                 </BtnWrap>
                             )}
                         </TextWrapper>
                     </Column1>
 
-                    {/* Right Side - Image or Google Map */}
+                    {/* Image Column */}
                     <Column2>
                         <ImgWrap isMap={isMap}>
                             {isMap ? (

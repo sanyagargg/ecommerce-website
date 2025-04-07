@@ -2,17 +2,25 @@ import styled from 'styled-components';
 
 export const InfoContainer = styled.div`
     color: #fff;
-    background: ${({ lightBg }) => (lightBg ? '#f9f9f9' : '#000')};
+    background: ${({ lightBg, bgImage }) =>
+        bgImage
+            ? `url(${bgImage}) center center/cover no-repeat`
+            : lightBg
+            ? '#f9f9f9'
+            : '#000'};
+    position: relative;
+    padding: 190px 0; 
 
     @media screen and (max-width: 768px) {
-        padding: 100px 0;
+        padding: 100px 0; 
     }
 `;
+
 
 export const InfoWrapper = styled.div`
     display: grid;
     z-index: 1;
-    height: 860px;
+    height: auto; /* 🔄 was 860px */
     width: 100%;
     max-width: 1100px;
     margin-right: auto;
@@ -20,6 +28,7 @@ export const InfoWrapper = styled.div`
     padding: 0 24px;
     justify-content: center;
 `;
+
 
 export const InfoRow = styled.div`
     display: grid;
@@ -29,7 +38,8 @@ export const InfoRow = styled.div`
     column-gap: 50px;
 
     @media screen and (max-width: 768px) {
-        grid-template-areas: ${({ imgStart }) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
+        grid-template-areas: ${({ imgStart }) =>
+            imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
     }
 `;
 
