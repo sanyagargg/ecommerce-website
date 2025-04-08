@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const FooterContainer = styled.footer`
-    background-color: #3D0D01;
+    background-color: rgb(1, 5, 41);
 `
 
 export const ISOStrip = styled.div`

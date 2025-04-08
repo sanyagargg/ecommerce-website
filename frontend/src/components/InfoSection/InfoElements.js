@@ -7,7 +7,7 @@ export const InfoContainer = styled.div`
             ? `url(${bgImage}) center center/cover no-repeat`
             : lightBg
             ? '#f9f9f9'
-            : '#000'};
+            : 'rgb(0, 0, 0)'};
     position: relative;
     padding: 190px 0; 
 
@@ -109,6 +109,6 @@ export const Img = styled.img`
     width: 100%;
     height: auto;
     object-fit: contain;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    
     border-radius: ${({ isCircular }) => (isCircular ? '50%' : '0')};
 `;

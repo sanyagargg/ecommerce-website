@@ -1,4 +1,4 @@
-import aboutImage from '../../images/aboutus.jpg';
+import aboutImage from '../../images/aboutus.png';
 import productimage from '../../images/products.png';
 
 export const homeObjOne = {
@@ -65,7 +65,7 @@ export const homeObjFour = {
     lightTextDesc: true,
     topLine: 'Get a Quote',
     headline: 'Have something specific in mind?',
-    description: 'Thank you for visiting CE online. Please use the form to get in touch with us. If you have a specific design need, please mention that in your submission and our representative will reach out to you soon.',
+    description: 'Thank you for visiting Charismatic Electronics online. Please use the form to get in touch with us. If you have a specific design need, please mention that in your submission and our representative will reach out to you soon.',
     imgStart: false,
     alt: 'Aboutus',
     dark: true,

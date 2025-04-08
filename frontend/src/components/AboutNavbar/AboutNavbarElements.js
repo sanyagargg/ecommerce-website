@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 // Outer nav bar
 export const Nav = styled.nav`
-  background: #000;
+  background: rgb(1, 5, 41);
   height: 80px;
   display: flex;
   align-items: center;

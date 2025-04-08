@@ -7,6 +7,7 @@ import InfoSection from '../components/InfoSection'
 import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour } from '../components/InfoSection/Data'
 import Gallery from '../components/Gallery'
 import Footer from '../components/Footer'
+import NewDesignForm from '../components/InfoSection/NewDesignForm';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -28,7 +29,7 @@ const Home = () => {
             <InfoSection {...homeObjTwo}/>
             <Gallery/>
             <InfoSection {...homeObjThree}/>
-            <InfoSection {...homeObjFour}/>
+            <NewDesignForm {...homeObjFour}/>
             <Footer/>
         </>
     )
