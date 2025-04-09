@@ -12,6 +12,9 @@ pnpm-debug.log*
 # Environment variables
 .env
 
+
+/uploads/
+
 # Database files (optional, if using local MongoDB dumps)
 *.local
 *.sdb

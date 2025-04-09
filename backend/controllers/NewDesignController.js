@@ -1,24 +1,32 @@
 //Handles form logic (saving data, sending emails/SMS)
 //Handles the logic of saving data to the database
 
-const NewDesignForm = require('../models/NewDesignForm');
+const NewDesign = require('../models/NewDesignForm');
+const sendEmail = require('../utils/email');
 
-const handleNewDesign = async (req, res) => {
+const handleNewDesignSubmission = async (req, res) => {
   try {
-    const filePath = req.file ? req.file.path : null;
+    const {
+      name, email, phone, companyName,
+      companyAddress, state, country, description
+    } = req.body;
 
-    const newForm = new NewDesignForm({
-      ...req.body,
-      filePath
+    const file = req.file ? req.file.filename : null;
+
+    const newEntry = new NewDesign({
+      name, email, phone, companyName,
+      companyAddress, state, country, description, file
     });
 
-    await newForm.save();
+    await newEntry.save();
 
-    res.status(200).json({ message: 'Form submitted successfully' });
+    await sendEmail({ ...req.body, file });
+
+    res.status(200).json({ message: 'Form submitted and email sent successfully.' });
   } catch (error) {
-    console.error('Submission Error:', error);
-    res.status(500).json({ message: 'Server error' });
+    console.error('Error in form submission:', error);
+    res.status(500).json({ message: 'Something went wrong while processing your request.' });
   }
 };
 
-module.exports = handleNewDesign;
+module.exports = { handleNewDesignSubmission };

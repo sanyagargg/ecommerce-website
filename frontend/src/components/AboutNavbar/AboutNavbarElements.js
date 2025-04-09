@@ -1,97 +1,96 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link as LinkScroll } from 'react-scroll';
 
-// Outer nav bar
 export const Nav = styled.nav`
-  background: rgb(1, 5, 41);
+  background: ${({ scrollNav }) => (scrollNav ? 'rgb(1,5,41)' : 'rgb(1,5,41)')};
   height: 80px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
+  font-size: 1rem;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 999;
+  transition: 0.4s all ease;
 `;
 
-// Container to hold hamburger + logo in a row (aligned left)
-export const NavLeftContainer = styled.div`
+export const NavbarContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  height: 100px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 24px;
+`;
+
+export const NavLeft = styled.div`
   display: flex;
   align-items: center;
+  gap: 12px;
 `;
 
-// Hamburger icon on far left
-export const NavIcon = styled.div`
+export const MobileIcon = styled.div`
+  display: block;
   font-size: 1.8rem;
   cursor: pointer;
   color: #fff;
-  margin-right: 16px;
 `;
 
-// Logo with image and text
-export const NavLogo = styled(Link)`
-  color: #fff;
+export const NavLogo = styled.div`
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  gap: 10px;
+  cursor: pointer;
 
   img {
-    width: 40px;
-    height: auto;
+    height: 40px;
+    width: auto;
   }
 `;
 
-export const LogoImageWrapper = styled.div`
-  display: flex;
-  align-items: center;
+export const NavCE = styled.span`
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
 `;
 
-// Sidebar styling
 export const Sidebar = styled.aside`
   position: fixed;
-  top: 0;
-  right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  z-index: 1000;
   width: 250px;
   height: 100%;
-  background: #111;
-  display: flex;
+  background: #000;
+  display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
   flex-direction: column;
-  align-items: flex-start;
+  top: 0;
+  left: 0;
   padding-top: 60px;
   transition: 0.3s ease-in-out;
-  z-index: 999;
 `;
 
 export const CloseIcon = styled.div`
+  color: #fff;
+  font-size: 2rem;
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 2rem;
-  color: #fff;
   cursor: pointer;
 `;
 
-export const SidebarMenu = styled.ul`
-  list-style: none;
-  padding: 0;
+export const SidebarMenu = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 `;
 
-export const SidebarItem = styled.li`
+export const SidebarItem = styled.div`
   padding: 16px 24px;
-  width: 100%;
   color: #fff;
+  font-size: 1rem;
   cursor: pointer;
-  font-size: 1.1rem;
-  transition: background 0.2s ease-in-out;
+  transition: background 0.3s ease;
 
   &:hover {
-    background: #F39540;
+    background: orange;
     color: #000;
   }
 `;

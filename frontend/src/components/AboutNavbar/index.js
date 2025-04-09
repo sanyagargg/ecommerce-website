@@ -1,44 +1,67 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { FaBars } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import {
   Nav,
-  NavIcon,
+  NavbarContainer,
+  NavLeft,
+  MobileIcon,
   NavLogo,
+  NavCE,
   Sidebar,
-  SidebarMenu,
-  SidebarItem,
   CloseIcon,
-  LogoImageWrapper,
-  NavLeftContainer
+  SidebarMenu,
+  SidebarItem
 } from './AboutNavbarElements';
-import { FaBars } from 'react-icons/fa';
 
 const AboutNavbar = () => {
+  const [scrollNav, setScrollNav] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate(); // <-- useNavigate from React Router
 
-  const toggleSidebar = () => setIsOpen(!isOpen);
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNav);
+    return () => window.removeEventListener('scroll', changeNav);
+  }, []);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
 
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
+      toggleSidebar();
     }
+  };
+
+  const goToHome = () => {
+    navigate('/'); // <-- Go to homepage
   };
 
   return (
     <>
-      <Nav>
-        <NavLeftContainer>
-          <NavIcon onClick={toggleSidebar}>
-            <FaBars />
-          </NavIcon>
-          <NavLogo to="/">
-            <LogoImageWrapper>
+      <Nav scrollNav={scrollNav}>
+        <NavbarContainer>
+          <NavLeft>
+            <MobileIcon onClick={toggleSidebar}>
+              <FaBars />
+            </MobileIcon>
+            <NavLogo onClick={goToHome}>
               <img src="/charismaticlogo.webp" alt="Logo" />
-            </LogoImageWrapper>
-            CE
-          </NavLogo>
-        </NavLeftContainer>
+            </NavLogo>
+            <NavCE onClick={goToHome}>CE</NavCE>
+          </NavLeft>
+        </NavbarContainer>
       </Nav>
 
       <Sidebar isOpen={isOpen}>

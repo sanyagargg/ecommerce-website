@@ -3,7 +3,7 @@ import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
 export const Nav = styled.nav`
-  background: ${({ scrollNav }) => (scrollNav ? 'rgb(1, 5, 41)' : 'transparent')};
+  background:rgb(1, 5, 41);
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -13,7 +13,7 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-  transition: 0.8s all ease;
+  transition: all 0.3s ease-in-out;
 `;
 
 export const NavbarContainer = styled.div`
@@ -72,6 +72,7 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 80px;
+  position: relative;
 `;
 
 export const NavLinks = styled(LinkS)`
@@ -106,5 +107,51 @@ export const SearchIconWrapper = styled.div`
 
   &:hover {
     color: #F39540;
+  }
+`;
+
+export const DropdownMenu = styled.ul`
+  position: absolute;
+  top: 80px;
+  left: 0;
+  background-color: rgb(1, 5, 41);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  z-index: 99;
+`;
+
+export const DropdownItem = styled.li`
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #111c4e;
+  }
+`;
+
+export const SubDropdownMenu = styled.ul`
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: rgb(1, 5, 41);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+`;
+
+export const SubDropdownItem = styled.li`
+  color: #fff;
+  padding: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #111c4e;
   }
 `;

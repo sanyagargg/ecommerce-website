@@ -3,10 +3,11 @@
 
 const express = require('express');
 const router = express.Router();
-const upload = require('../middlewares/upload');
-const handleNewDesign = require('../controllers/NewDesignController');
+const upload = require('../middlewares/upload'); // middleware name is correct
+const { handleNewDesignSubmission } = require('../controllers/NewDesignController');
 
-router.post('/', upload.single('file'), handleNewDesign);
+// Use the actual function
+router.post('/newDesign', upload.single('file'), handleNewDesignSubmission);
 
 module.exports = router;
 
