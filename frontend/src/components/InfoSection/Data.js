@@ -1,5 +1,5 @@
 import aboutImage from '../../images/aboutus.png';
-import productimage from '../../images/products.png';
+import productimage from '../../images/products.jpg';
 
 export const homeObjOne = {
     id: 'about',
@@ -26,7 +26,7 @@ export const homeObjOne = {
     lightTextDesc: false,
     topLine: 'Products',
     headline: 'Our Products',
-    description: 'Our products are crafted using the highest quality components and the latest technology, adhering to industry standards. They are meticulously engineered to offer exceptional strength and optimal performance. Our quality controllers rigorously test them across various parameters to ensure they meet the highest standards of excellence.',
+    description: 'Driven by a pursuit of excellence, our product range reflects the perfect synergy of innovation, quality, and precision. From design to delivery, we uphold the highest standards in material selection, manufacturing, and testing. Our components are trusted by professionals across industries for their consistency, durability, and seamless integration into complex electronic systems.',
     buttonLabel: 'View Products',
     imgStart: true,
     img: productimage,
