@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import AboutNavbar from '../components/AboutNavbar';
 import AboutInfoSection from '../components/InfoSection/AboutInfoSection';
-import HeroSection from '../components/HeroSection'
+import AboutHeroSection from '../components/ProductsHeroSection/AboutHero'
 import Sidebar from '../components/Sidebar'
 import {
   aboutObj1,
@@ -23,6 +23,7 @@ const About = () => {
     <>
       <AboutNavbar />
       <ScrollToTop />
+      <AboutHeroSection />
       <AboutInfoSection {...aboutObj1}/>
       <AboutInfoSection {...aboutObj2}/>
       <AboutInfoSection {...aboutObj3}/>  

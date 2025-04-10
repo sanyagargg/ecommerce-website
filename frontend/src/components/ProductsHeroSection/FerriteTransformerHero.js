@@ -11,7 +11,7 @@ import {
 } from './ProductsHeroElements';
 import Video from '../../videos/productsvid.mp4';
 
-const HeroSection = () => {
+const FerriteTransformerHeroSection = () => {
   return (
     <HeroContainer id="home">
       <HeroContentWrapper>
@@ -79,4 +79,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default FerriteTransformerHeroSection;

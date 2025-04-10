@@ -11,12 +11,15 @@ import {
 } from './ProductsHeroElements';
 import Video from '../../videos/productsvid.mp4';
 
-const HeroSection = () => {
+const AboutHeroSection = () => {
   return (
     <HeroContainer id="home">
       <HeroContentWrapper>
         <VideoWrapper>
-          <StyledVideo autoPlay loop muted src={Video} type="video/mp4" />
+          <StyledVideo autoPlay loop muted>
+            <source src={Video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </StyledVideo>
         </VideoWrapper>
         <HeroContent>
           <HeroH1>Our Product Range</HeroH1>
@@ -55,23 +58,6 @@ const HeroSection = () => {
             <br /><br />
             <strong>Need something specific?</strong> We offer customized products designed to meet your exact requirements. Contact us today to discuss your unique needs and let us help you find the perfect solution.
             <br /><br />
-            <Link to="/#quote" style={{ display: 'inline-block', marginTop: '10px' }}>
-              <button style={{
-                backgroundColor: '#007BFF',
-                color: '#fff',
-                padding: '10px 20px',
-                fontSize: '16px',
-                border: 'none',
-                borderRadius: '5px',
-                cursor: 'pointer',
-                transition: 'background-color 0.3s ease'
-              }}
-              onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#0056b3'}
-              onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#007BFF'}
-              >
-                Get a Custom Design Quote
-              </button>
-            </Link>
           </HeroP>
         </HeroContent>
       </HeroContentWrapper>
@@ -79,4 +65,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default AboutHeroSection;

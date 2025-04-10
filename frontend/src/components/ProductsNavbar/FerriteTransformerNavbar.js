@@ -14,7 +14,7 @@ import {
   SidebarItem
 } from './ProductNavbarElements';
 
-const ProductsNavbar = () => {
+const FerriteTransformerNavbar = () => {
   const [scrollNav, setScrollNav] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -32,8 +32,8 @@ const ProductsNavbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleNavigate = (path) => {
-    navigate(`/products/${path}`);
+  const handleNavigate = (series) => {
+    navigate(`/products/ferritetransformer/${series}`);
     toggleSidebar();
   };
 
@@ -60,15 +60,19 @@ const ProductsNavbar = () => {
       <Sidebar isOpen={isOpen}>
         <CloseIcon onClick={toggleSidebar}>&times;</CloseIcon>
         <SidebarMenu>
-          <SidebarItem onClick={() => handleNavigate('ferritetransformer')}>Ferrite Transformer</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('linefilter')}>Line Filter / Common Mode Chokes</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('drumcoils')}>Drum Coils</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('toroidal')}>Toroidal Coil</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('bitrodcoil')}>Bit Rod Coil</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('eeseries')}>EE Series</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('efdseries')}>EFD Series</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('rmseries')}>RM Series</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('etdseries')}>ETD Series</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('epcseries')}>EPC Series</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('pqseries')}>PQ Series</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('eerseries')}>EER Series</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('potseries')}>POT Series</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('ecseries')}>EC Series</SidebarItem>
         </SidebarMenu>
       </Sidebar>
     </>
   );
 };
 
-export default ProductsNavbar;
+export default FerriteTransformerNavbar;
