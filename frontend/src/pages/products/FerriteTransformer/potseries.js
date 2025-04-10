@@ -1,8 +1,15 @@
 import React from 'react'
+import POTSeriesNavbar from '../../../components/ProductsNavbar/POTseriesNavbar'
+import POTSeriesHeroSection from '../../../components/ProductsHeroSection/POTseriesHero'
+import Footer from '../../../components/Footer'
 
 function POTseries() {
   return (
-    <div>POTseries</div>
+    <>
+    <POTSeriesNavbar />
+    <POTSeriesHeroSection />
+    <Footer />
+    </>
   )
 }
 
