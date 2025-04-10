@@ -1,8 +1,15 @@
 import React from 'react'
+import ECSeriesNavbar from '../../../components/ProductsNavbar/ECseriesNavbar'
+import ECSeriesHeroSection from '../../../components/ProductsHeroSection/ECseriesHero'
+import Footer from '../../../components/Footer'
 
 function ECseries() {
   return (
-    <div>ECseries</div>
+    <>
+    <ECSeriesNavbar />
+    <ECSeriesHeroSection />
+    <Footer />
+    </>
   )
 }
 

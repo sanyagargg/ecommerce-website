@@ -80,7 +80,10 @@ export const CloseIcon = styled.div`
 export const SidebarMenu = styled.div`
   display: flex;
   flex-direction: column;
+  max-height: calc(100vh - 100px); // or use a fixed height like 400px
+  overflow-y: auto;
 `;
+
 
 export const SidebarItem = styled.div`
   padding: 16px 24px;
