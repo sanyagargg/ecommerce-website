@@ -6,7 +6,7 @@ export const HeroContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
-  height: 800px;
+  height: 950px;
   background: rgb(253, 253, 253);
   position: relative;
   z-index: 2;
@@ -60,7 +60,7 @@ export const VideoWrapper = styled.div`
 export const StyledVideo = styled.video`
   width: 100%;
   border-radius: 10px;
-  height: 800px;
+  height: 950px;
  
 `;
 
