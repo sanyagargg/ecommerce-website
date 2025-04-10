@@ -12,19 +12,15 @@ import {
   CloseIcon,
   SidebarMenu,
   SidebarItem
-} from './AboutNavbarElements';
+} from './ProductNavbarElements';
 
-const AboutNavbar = () => {
+const BitRodCoilsNavbar = () => {
   const [scrollNav, setScrollNav] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate(); // <-- useNavigate from React Router
+  const navigate = useNavigate();
 
   const changeNav = () => {
-    if (window.scrollY >= 80) {
-      setScrollNav(true);
-    } else {
-      setScrollNav(false);
-    }
+    setScrollNav(window.scrollY >= 80);
   };
 
   useEffect(() => {
@@ -36,16 +32,13 @@ const AboutNavbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleScroll = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      toggleSidebar();
-    }
+  const handleNavigate = (model) => {
+    navigate(`/products/bitrod/${model}`);
+    toggleSidebar();
   };
 
   const goToHome = () => {
-    navigate('/'); // <-- Go to homepage
+    navigate('/products');
   };
 
   return (
@@ -67,17 +60,20 @@ const AboutNavbar = () => {
       <Sidebar isOpen={isOpen}>
         <CloseIcon onClick={toggleSidebar}>&times;</CloseIcon>
         <SidebarMenu>
-          <SidebarItem onClick={() => handleScroll('aboutObj1')}>Why Us</SidebarItem>
-          <SidebarItem onClick={() => handleScroll('aboutObj2')}>Our Vision</SidebarItem>
-          <SidebarItem onClick={() => handleScroll('aboutObj3')}>Core Values</SidebarItem>
-          <SidebarItem onClick={() => handleScroll('aboutObj4')}>Quality Policy</SidebarItem>
-          <SidebarItem onClick={() => handleScroll('aboutObj5')}>Manufacturing Capabilities</SidebarItem>
-          <SidebarItem onClick={() => handleScroll('aboutObj6')}>Technical Capabilities</SidebarItem>
-          <SidebarItem onClick={() => handleScroll('aboutObj7')}>Industries Served</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('3x10')}>3×10</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('3x13')}>3×13</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('4x14')}>4×14</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('5x15')}>5×15</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('6x20')}>6×20</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('6x25')}>6×25</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('8x20')}>8×20</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('8x25')}>8×25</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('10x30')}>10×30</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('10x35')}>10×35</SidebarItem>
         </SidebarMenu>
       </Sidebar>
     </>
   );
 };
 
-export default AboutNavbar;
+export default BitRodCoilsNavbar;

@@ -19,42 +19,21 @@ const FerriteTransformerHeroSection = () => {
           <StyledVideo autoPlay loop muted src={Video} type="video/mp4" />
         </VideoWrapper>
         <HeroContent>
-          <HeroH1>Our Product Range</HeroH1>
+          <HeroH1>Ferrite Transformers</HeroH1>
           <HeroP>
-            We specialize in designing and manufacturing premium electronic components that meet the highest industry standards. Our offerings include SPMS transformers, line filters, drum coils, toroidal coils, and bit-rod coils—each built for exceptional performance, reliability, and efficiency.
-            <br /><br />
-            <strong>
-              <Link to="/products/ferritetransformer" style={{ color: 'blue', textDecoration: 'underline' }}>
-                Ferrite Transformers:
-              </Link>
-            </strong> Available in EE, EFD, RM, ETD, EPC, PQ, EER, and POT series, these transformers are optimized for high efficiency and a wide range of applications.
-            <br />
-            <strong>
-              <Link to="/products/linefilter" style={{ color: 'blue', textDecoration: 'underline' }}>
-                Line Filters / Common Mode Chokes:
-              </Link>
-            </strong> Offered in UU9.8, UU10.5, UU16, UU21, UU20, ET24, and UT20 variants, they ensure effective EMI suppression and clean power delivery.
-            <br />
-            <strong>
-              <Link to="/products/drumcoil" style={{ color: 'blue', textDecoration: 'underline' }}>
-                Drum Coils:
-              </Link>
-            </strong> Manufactured in sizes like 6x8, 10x12, 10x15, 12x15, and 15x22, they are suitable for diverse industrial and commercial needs.
-            <br />
-            <strong>
-              <Link to="/products/toroidalcoil" style={{ color: 'blue', textDecoration: 'underline' }}>
-                Toroidal Coils:
-              </Link>
-            </strong> Ranging from models T9 to T36, with sizes including 3x10, 4x14, 5x15, 6x20, 8x20, 10x30, and 10x35, these coils offer compact, efficient, and low-loss solutions.
-            <br />
-            <strong>
-              <Link to="/products/bitrodcoil" style={{ color: 'blue', textDecoration: 'underline' }}>
-                Bit-Rod Coils:
-              </Link>
-            </strong> Available in sizes 3x10, 4x14, 5x15, 6x20, 8x20, 10x30, and 10x35, these components are designed for robust performance in demanding environments.
-            <br /><br />
-            <strong>Need something specific?</strong> We offer customized products designed to meet your exact requirements. Contact us today to discuss your unique needs and let us help you find the perfect solution.
-            <br /><br />
+            Our ferrite transformers are optimized for high-frequency use, offering excellent efficiency, compact size, and low EMI. Built with advanced ferrite materials, they suit SMPS circuits, inverters, and chargers.<br /><br />
+
+            <strong><Link to="/products/ferritetransformer/eeseries" style={{ color: 'blue', textDecoration: 'underline' }}>EE Series:</Link></strong> Available in models: E20, E25, E33, E40, E55, E65, E70, E80, E100. Classic design suitable for general-purpose transformers in power supplies. <br />
+            <strong><Link to="/products/ferritetransformer/efdseries" style={{ color: 'blue', textDecoration: 'underline' }}>EFD Series:</Link></strong> Available in models: EFD15, EFD20, EFD25, EFD30. Compact and flat design ideal for space-constrained applications like adapters and chargers. <br />
+            <strong><Link to="/products/ferritetransformer/rmseries" style={{ color: 'blue', textDecoration: 'underline' }}>RM Series:</Link></strong> Available in models: RM6, RM8, RM10, RM12. Round modular design providing low leakage and excellent shielding for signal and power use. <br />
+            <strong><Link to="/products/ferritetransformer/etdseries" style={{ color: 'blue', textDecoration: 'underline' }}>ETD Series:</Link></strong> Available in models: ETD29, ETD34, ETD39, ETD44, ETD49. Designed for high power and low profile applications, commonly used in switch-mode power supplies. <br />
+            <strong><Link to="/products/ferritetransformer/epcseries" style={{ color: 'blue', textDecoration: 'underline' }}>EPC Series:</Link></strong> Available in models: EPC10, EPC13, EPC17, EPC19. Compact and efficient cores ideal for power supplies with limited space. <br />
+            <strong><Link to="/products/ferritetransformer/pqseries" style={{ color: 'blue', textDecoration: 'underline' }}>PQ Series:</Link></strong> Available in models: PQ20, PQ26, PQ32, PQ35, PQ40. Designed to reduce winding resistance and core loss, perfect for high-efficiency designs. <br />
+            <strong><Link to="/products/ferritetransformer/eerseries" style={{ color: 'blue', textDecoration: 'underline' }}>EER Series:</Link></strong> Available in models: EER25, EER28, EER35, EER39. Efficient and compact, often used in high-frequency SMPS circuits. <br />
+            <strong><Link to="/products/ferritetransformer/potseries" style={{ color: 'blue', textDecoration: 'underline' }}>POT Series:</Link></strong> Available in models: POT30, POT40, POT50. Enclosed shape provides low EMI and is ideal for small signal and power transformers. <br />
+            <strong><Link to="/products/ferritetransformer/ecseries" style={{ color: 'blue', textDecoration: 'underline' }}>EC Series:</Link></strong> Available in models: EC28, EC35, EC40, EC52. Designed with extended legs for better winding space, commonly used in high-frequency switching power supplies. <br /><br />
+
+            <strong>Need something specific?</strong> We offer customized products designed to meet your exact requirements. Contact us today to discuss your unique needs and let us help you find the perfect solution.<br /><br />
             <Link to="/#quote" style={{ display: 'inline-block', marginTop: '10px' }}>
               <button style={{
                 backgroundColor: '#007BFF',

@@ -38,7 +38,7 @@ const ProductsNavbar = () => {
   };
 
   const goToHome = () => {
-    navigate('/');
+    navigate('/products');
   };
 
   return (

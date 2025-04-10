@@ -14,7 +14,7 @@ import {
   SidebarItem
 } from './ProductNavbarElements';
 
-const FerriteTransformerNavbar = () => {
+const ToroidalCoilsNavbar = () => {
   const [scrollNav, setScrollNav] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -32,8 +32,8 @@ const FerriteTransformerNavbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleNavigate = (series) => {
-    navigate(`/products/ferritetransformer/${series}`);
+  const handleNavigate = (model) => {
+    navigate(`/products/toroidal/${model}`);
     toggleSidebar();
   };
 
@@ -60,19 +60,24 @@ const FerriteTransformerNavbar = () => {
       <Sidebar isOpen={isOpen}>
         <CloseIcon onClick={toggleSidebar}>&times;</CloseIcon>
         <SidebarMenu>
-          <SidebarItem onClick={() => handleNavigate('eeseries')}>EE Series</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('efdseries')}>EFD Series</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('rmseries')}>RM Series</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('etdseries')}>ETD Series</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('epcseries')}>EPC Series</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pqseries')}>PQ Series</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('eerseries')}>EER Series</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('potseries')}>POT Series</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('ecseries')}>EC Series</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('t9')}>T9</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('t10')}>T10</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('t11')}>T11</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('t12')}>T12</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('t12.5')}>T12.5</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('t13')}>T13</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('t16')}>T16</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('t18')}>T18</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('t20')}>T20</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('t23')}>T23</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('t25')}>T25</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('t27')}>T27</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('t30')}>T30</SidebarItem>
+          <SidebarItem onClick={() => handleNavigate('t36')}>T36</SidebarItem>
         </SidebarMenu>
       </Sidebar>
     </>
   );
 };
 
-export default FerriteTransformerNavbar;
+export default ToroidalCoilsNavbar;

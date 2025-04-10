@@ -37,6 +37,7 @@ export const HeroContentWrapper = styled.div`
   max-width: 1200px;
   width: 100%;
   gap: 70px;
+  padding-top: 10px;
 
   @media screen and (max-width: 768px) {
     flex-direction: column; /* Stack video and text */

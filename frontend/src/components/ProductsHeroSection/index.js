@@ -36,13 +36,13 @@ const HeroSection = () => {
             </strong> Offered in UU9.8, UU10.5, UU16, UU21, UU20, ET24, and UT20 variants, they ensure effective EMI suppression and clean power delivery.
             <br />
             <strong>
-              <Link to="/products/drumcoil" style={{ color: 'blue', textDecoration: 'underline' }}>
+              <Link to="/products/drumcoils" style={{ color: 'blue', textDecoration: 'underline' }}>
                 Drum Coils:
               </Link>
             </strong> Manufactured in sizes like 6x8, 10x12, 10x15, 12x15, and 15x22, they are suitable for diverse industrial and commercial needs.
             <br />
             <strong>
-              <Link to="/products/toroidalcoil" style={{ color: 'blue', textDecoration: 'underline' }}>
+              <Link to="/products/toroidal" style={{ color: 'blue', textDecoration: 'underline' }}>
                 Toroidal Coils:
               </Link>
             </strong> Ranging from models T9 to T36, with sizes including 3x10, 4x14, 5x15, 6x20, 8x20, 10x30, and 10x35, these coils offer compact, efficient, and low-loss solutions.
