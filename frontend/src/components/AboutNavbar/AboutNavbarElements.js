@@ -5,7 +5,7 @@ export const Nav = styled.nav`
   background: ${({ scrollNav }) => (scrollNav ? 'rgb(1,5,41)' : 'rgb(1,5,41)')};
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-size: 1rem;
   position: sticky;
@@ -59,7 +59,7 @@ export const Sidebar = styled.aside`
   z-index: 1000;
   width: 250px;
   height: 100%;
-  background: #000;
+  background: rgb(1,5,41);
   display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
   flex-direction: column;
   top: 0;
@@ -90,7 +90,7 @@ export const SidebarItem = styled.div`
   transition: background 0.3s ease;
 
   &:hover {
-    background: orange;
-    color: #000;
+    background: #111c4e;
+    color: #fff;
   }
 `;
