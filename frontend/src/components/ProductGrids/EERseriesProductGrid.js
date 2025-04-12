@@ -27,11 +27,11 @@ import EER35 from '../../images/eerseriesimages/eer35.jpg';
 import EER39 from '../../images/eerseriesimages/eer39.jpg';
 
 
-import EER20PDF from '../../images/eerseriesimages/eer20.pdf';
-import EER25PDF from '../../images/eerseriesimages/eer25.pdf';
-import EER28PDF from '../../images/eerseriesimages/eer28.pdf';
-import EER35PDF from '../../images/eerseriesimages/eer35.pdf';
-import EER39PDF from '../../images/eerseriesimages/eer39.pdf';
+import EER20PDF from '../../pdfs/eerseriespdfs/eer20.pdf';
+import EER25PDF from '../../pdfs/eerseriespdfs/eer25.pdf';
+import EER28PDF from '../../pdfs/eerseriespdfs/eer28.pdf';
+import EER35PDF from '../../pdfs/eerseriespdfs/eer35.pdf';
+import EER39PDF from '../../pdfs/eerseriespdfs/eer39.pdf';
 
 
 const products = [

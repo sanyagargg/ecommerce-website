@@ -57,7 +57,7 @@ const AboutNavbar = () => {
               <FaBars />
             </MobileIcon>
             <NavLogo onClick={goToHome}>
-              <img src="/charismaticlogo.webp" alt="Logo" />
+              <img src="/charismaticlogo.png" alt="Logo" />
             </NavLogo>
             <NavCE onClick={goToHome}>CE</NavCE>
           </NavLeft>

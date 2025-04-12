@@ -7,7 +7,7 @@ function bitrodcoil() {
   return (
     <>
     <BitRodCoilsNavbar />
-    <BitRodseriesProductGrid.js />
+    <BitRodseriesProductGrid />
     <Footer />
     </>
   )

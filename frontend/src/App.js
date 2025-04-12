@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/index';
 import About from './pages/about';
 import Products from './pages/products';
+import Contact from './pages/contact';
 
 // Product detail pages
 import FerriteTransformer from './pages/products/FerriteTransformer/ferritetransformer';
@@ -32,6 +33,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/contact" element={<Contact />} />
 
         {/* Product category level */}
         <Route path="/products/ferritetransformer" element={<FerriteTransformer />} />

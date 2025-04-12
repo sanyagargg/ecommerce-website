@@ -12,9 +12,9 @@ import {
   CloseIcon,
   SidebarMenu,
   SidebarItem
-} from './ProductNavbarElements';
+} from './ContactNavbarElements';
 
-const EESeriesNavbar = () => {
+const ContactNavbar = () => {
   const [scrollNav, setScrollNav] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -57,4 +57,4 @@ const EESeriesNavbar = () => {
   );
 };
 
-export default EESeriesNavbar;
+export default ContactNavbar;

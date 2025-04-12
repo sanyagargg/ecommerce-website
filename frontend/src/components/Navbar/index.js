@@ -39,7 +39,7 @@ const Navbar = ({ toggle }) => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLogo to="/" onClick={toggleHome}>
-            <img src="/charismaticlogo.webp" alt="Logo" />
+            <img src="/charismaticlogo.png" alt="Logo" />
             CE
           </NavLogo>
 

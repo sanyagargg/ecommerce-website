@@ -11,16 +11,16 @@ import {
 } from './ProductGridElements'; 
 
 // Import images for EFD series
-import efd10 from '../../images/efdseriesimages/efd10.jpg';
-import efd12 from '../../images/efdseriesimages/efd12.jpg';
-import efd15 from '../../images/efdseriesimages/efd15.jpg';
-import efd20 from '../../images/efdseriesimages/efd20.jpg';
-import efd21 from '../../images/efdseriesimages/efd21.jpg';
-import efd25 from '../../images/efdseriesimages/efd25.jpg';
-import efd30 from '../../images/efdseriesimages/efd30.jpg';
-import efd31 from '../../images/efdseriesimages/efd31.jpg';
-import efd34 from '../../images/efdseriesimages/efd34.jpg';
-import efd40 from '../../images/efdseriesimages/efd40.jpg';
+import efd10 from '../../images/efdseriesimages/efd-10.jpg';
+import efd12 from '../../images/efdseriesimages/efd-12.jpg';
+import efd15 from '../../images/efdseriesimages/efd-15.jpg';
+import efd20 from '../../images/efdseriesimages/efd-20.jpg';
+import efd21 from '../../images/efdseriesimages/efd-21.jpg';
+import efd25 from '../../images/efdseriesimages/efd-25.jpg';
+import efd30 from '../../images/efdseriesimages/efd-30.jpg';
+import efd31 from '../../images/efdseriesimages/efd-31.jpg';
+import efd34 from '../../images/efdseriesimages/efd-34.jpg';
+import efd40 from '../../images/efdseriesimages/efd-40.jpg';
 
 const products = [
   { id: 1, title: 'EFD-10', img: efd10 },
