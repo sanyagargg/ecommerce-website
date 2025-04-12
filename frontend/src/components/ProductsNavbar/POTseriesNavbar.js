@@ -46,32 +46,13 @@ const POTSeriesNavbar = () => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLeft>
-            <MobileIcon onClick={toggleSidebar}>
-              <FaBars />
-            </MobileIcon>
             <NavLogo onClick={goToHome}>
-              <img src="/charismaticlogo.webp" alt="Logo" />
+              <img src="/charismaticlogo.png" alt="Logo" />
             </NavLogo>
             <NavCE onClick={goToHome}>CE</NavCE>
           </NavLeft>
         </NavbarContainer>
       </Nav>
-
-      <Sidebar isOpen={isOpen}>
-        <CloseIcon onClick={toggleSidebar}>&times;</CloseIcon>
-        <SidebarMenu>
-          <SidebarItem onClick={() => handleNavigate('pot2311')}>POT 23/11</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pot2511')}>POT 25/11</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pot3019')}>POT 30/19</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pot3119')}>POT 31/19</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pot3314')}>POT 33/14</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pot3319')}>POT 33/19</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pot3324')}>POT 33/24</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pot4025')}>POT 40/25</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pot4027')}>POT 40/27</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pot4028')}>POT 40/28</SidebarItem>
-        </SidebarMenu>
-      </Sidebar>
     </>
   );
 };

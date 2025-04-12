@@ -6,6 +6,8 @@ import Home from './pages/index';
 import About from './pages/about';
 import Products from './pages/products';
 import Contact from './pages/contact';
+import Careers from './pages/careers';
+import Gallery from './pages/gallery';
 
 // Product detail pages
 import FerriteTransformer from './pages/products/FerriteTransformer/ferritetransformer';
@@ -25,15 +27,19 @@ import PQseries from './pages/products/FerriteTransformer/pqseries';
 import EERseries from './pages/products/FerriteTransformer/eerseries';
 import POTseries from './pages/products/FerriteTransformer/potseries';
 import ECseries from './pages/products/FerriteTransformer/ecseries';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/gallery" element={<Gallery />} />
 
         {/* Product category level */}
         <Route path="/products/ferritetransformer" element={<FerriteTransformer />} />

@@ -46,27 +46,13 @@ const EERSeriesNavbar = () => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLeft>
-            <MobileIcon onClick={toggleSidebar}>
-              <FaBars />
-            </MobileIcon>
             <NavLogo onClick={goToHome}>
-              <img src="/charismaticlogo.webp" alt="Logo" />
+              <img src="/charismaticlogo.png" alt="Logo" />
             </NavLogo>
             <NavCE onClick={goToHome}>CE</NavCE>
           </NavLeft>
         </NavbarContainer>
       </Nav>
-
-      <Sidebar isOpen={isOpen}>
-        <CloseIcon onClick={toggleSidebar}>&times;</CloseIcon>
-        <SidebarMenu>
-          <SidebarItem onClick={() => handleNavigate('eer20')}>EER 20</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('eer25')}>EER 25</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('eer28')}>EER 28</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('eer35')}>EER 35</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('eer39')}>EER 39</SidebarItem>
-        </SidebarMenu>
-      </Sidebar>
     </>
   );
 };

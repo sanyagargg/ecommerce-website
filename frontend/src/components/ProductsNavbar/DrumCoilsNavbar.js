@@ -33,7 +33,7 @@ const DrumCoilsNavbar = () => {
   };
 
   const handleNavigate = (model) => {
-    navigate(`/products/drumcoils/${model}`);
+    navigate(`/products/ferritetransformer/eeseries/ee${model}`);
     toggleSidebar();
   };
 
@@ -46,28 +46,13 @@ const DrumCoilsNavbar = () => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLeft>
-            <MobileIcon onClick={toggleSidebar}>
-              <FaBars />
-            </MobileIcon>
             <NavLogo onClick={goToHome}>
-              <img src="/charismaticlogo.webp" alt="Logo" />
+              <img src="/charismaticlogo.png" alt="Logo" />
             </NavLogo>
             <NavCE onClick={goToHome}>CE</NavCE>
           </NavLeft>
         </NavbarContainer>
       </Nav>
-
-      <Sidebar isOpen={isOpen}>
-        <CloseIcon onClick={toggleSidebar}>&times;</CloseIcon>
-        <SidebarMenu>
-          <SidebarItem onClick={() => handleNavigate('drum6x8')}>Drum 6×8</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('drum8x10')}>Drum 8×10</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('drum10x12')}>Drum 10×12</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('drum10x15')}>Drum 10×15</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('drum12x15')}>Drum 12×15</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('drum15x22')}>Drum 15×22</SidebarItem>
-        </SidebarMenu>
-      </Sidebar>
     </>
   );
 };

@@ -33,7 +33,7 @@ const RMSeriesNavbar = () => {
   };
 
   const handleNavigate = (model) => {
-    navigate(`/products/ferritetransformer/rmseries/${model}`);
+    navigate(`/products/ferritetransformer/eeseries/ee${model}`);
     toggleSidebar();
   };
 
@@ -46,28 +46,13 @@ const RMSeriesNavbar = () => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLeft>
-            <MobileIcon onClick={toggleSidebar}>
-              <FaBars />
-            </MobileIcon>
             <NavLogo onClick={goToHome}>
-              <img src="/charismaticlogo.webp" alt="Logo" />
+              <img src="/charismaticlogo.png" alt="Logo" />
             </NavLogo>
             <NavCE onClick={goToHome}>CE</NavCE>
           </NavLeft>
         </NavbarContainer>
       </Nav>
-
-      <Sidebar isOpen={isOpen}>
-        <CloseIcon onClick={toggleSidebar}>&times;</CloseIcon>
-        <SidebarMenu>
-          <SidebarItem onClick={() => handleNavigate('rm4')}>RM 4</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('rm5')}>RM 5</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('rm6')}>RM 6</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('rm8')}>RM 8</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('rm10')}>RM 10</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('rm12')}>RM 12</SidebarItem>
-        </SidebarMenu>
-      </Sidebar>
     </>
   );
 };

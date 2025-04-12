@@ -11,6 +11,7 @@ import {
   NavItem,
   NavRouteLink,
   NavBtn,
+  NavLinks,
   SearchIconWrapper
 } from './NavbarElements';
 
@@ -58,11 +59,31 @@ const Navbar = ({ toggle }) => {
               <NavRouteLink to="/gallery">Gallery</NavRouteLink>
             </NavItem>
             <NavItem>
-              <NavRouteLink to="/contact">Contact</NavRouteLink>
+              <NavLinks
+                to="contact"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                activeClass="active"
+              >
+                Contact
+              </NavLinks>
             </NavItem>
+            
             <NavItem>
-              <NavRouteLink to="/quote">Get a Quote</NavRouteLink>
+              <NavLinks
+                to="quote"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                activeClass="active"
+              >
+                Get a Quote
+              </NavLinks>
             </NavItem>
+
             <NavItem>
               <NavRouteLink to="/careers">Careers</NavRouteLink>
             </NavItem>

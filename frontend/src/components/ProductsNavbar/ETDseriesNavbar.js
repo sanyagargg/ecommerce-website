@@ -33,7 +33,7 @@ const ETDSeriesNavbar = () => {
   };
 
   const handleNavigate = (model) => {
-    navigate(`/products/ferritetransformer/etdseries/${model}`);
+    navigate(`/products/ferritetransformer/eeseries/ee${model}`);
     toggleSidebar();
   };
 
@@ -46,28 +46,13 @@ const ETDSeriesNavbar = () => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLeft>
-            <MobileIcon onClick={toggleSidebar}>
-              <FaBars />
-            </MobileIcon>
             <NavLogo onClick={goToHome}>
-              <img src="/charismaticlogo.webp" alt="Logo" />
+              <img src="/charismaticlogo.png" alt="Logo" />
             </NavLogo>
             <NavCE onClick={goToHome}>CE</NavCE>
           </NavLeft>
         </NavbarContainer>
       </Nav>
-
-      <Sidebar isOpen={isOpen}>
-        <CloseIcon onClick={toggleSidebar}>&times;</CloseIcon>
-        <SidebarMenu>
-          <SidebarItem onClick={() => handleNavigate('etd29')}>ETD 29</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('etd34')}>ETD 34</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('etd35')}>ETD 35</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('etd39')}>ETD 39</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('etd40')}>ETD 40</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('etd44')}>ETD 44</SidebarItem>
-        </SidebarMenu>
-      </Sidebar>
     </>
   );
 };

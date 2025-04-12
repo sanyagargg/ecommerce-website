@@ -46,25 +46,13 @@ const ECSeriesNavbar = () => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLeft>
-            <MobileIcon onClick={toggleSidebar}>
-              <FaBars />
-            </MobileIcon>
             <NavLogo onClick={goToHome}>
-              <img src="/charismaticlogo.webp" alt="Logo" />
+              <img src="/charismaticlogo.png" alt="Logo" />
             </NavLogo>
             <NavCE onClick={goToHome}>CE</NavCE>
           </NavLeft>
         </NavbarContainer>
       </Nav>
-
-      <Sidebar isOpen={isOpen}>
-        <CloseIcon onClick={toggleSidebar}>&times;</CloseIcon>
-        <SidebarMenu>
-          <SidebarItem onClick={() => handleNavigate('ec28')}>EC 28</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('ec39')}>EC 39</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('ec40')}>EC 40</SidebarItem>
-        </SidebarMenu>
-      </Sidebar>
     </>
   );
 };

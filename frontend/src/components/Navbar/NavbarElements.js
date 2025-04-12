@@ -115,6 +115,7 @@ export const NavBtn = styled.nav`
   }
 `;
 
+
 export const SearchIconWrapper = styled.div`
   font-size: 18px;
   color: #fff;

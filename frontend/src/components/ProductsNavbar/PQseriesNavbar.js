@@ -33,7 +33,7 @@ const PQSeriesNavbar = () => {
   };
 
   const handleNavigate = (model) => {
-    navigate(`/products/ferritetransformer/pqseries/${model}`);
+    navigate(`/products/ferritetransformer/eeseries/ee${model}`);
     toggleSidebar();
   };
 
@@ -46,28 +46,13 @@ const PQSeriesNavbar = () => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLeft>
-            <MobileIcon onClick={toggleSidebar}>
-              <FaBars />
-            </MobileIcon>
             <NavLogo onClick={goToHome}>
-              <img src="/charismaticlogo.webp" alt="Logo" />
+              <img src="/charismaticlogo.png" alt="Logo" />
             </NavLogo>
             <NavCE onClick={goToHome}>CE</NavCE>
           </NavLeft>
         </NavbarContainer>
       </Nav>
-
-      <Sidebar isOpen={isOpen}>
-        <CloseIcon onClick={toggleSidebar}>&times;</CloseIcon>
-        <SidebarMenu>
-          <SidebarItem onClick={() => handleNavigate('pq2012')}>PQ 2012</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pq2016')}>PQ 2016</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pq2620')}>PQ 2620</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pq2625')}>PQ 2625</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pq3220')}>PQ 3220</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('pq3230')}>PQ 3230</SidebarItem>
-        </SidebarMenu>
-      </Sidebar>
     </>
   );
 };

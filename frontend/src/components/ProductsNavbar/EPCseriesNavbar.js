@@ -46,30 +46,13 @@ const EPCSeriesNavbar = () => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLeft>
-            <MobileIcon onClick={toggleSidebar}>
-              <FaBars />
-            </MobileIcon>
             <NavLogo onClick={goToHome}>
-              <img src="/charismaticlogo.webp" alt="Logo" />
+              <img src="/charismaticlogo.png" alt="Logo" />
             </NavLogo>
             <NavCE onClick={goToHome}>CE</NavCE>
           </NavLeft>
         </NavbarContainer>
       </Nav>
-
-      <Sidebar isOpen={isOpen}>
-        <CloseIcon onClick={toggleSidebar}>&times;</CloseIcon>
-        <SidebarMenu>
-          <SidebarItem onClick={() => handleNavigate('epc13')}>EPC 13</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('epc14')}>EPC 14</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('epc17')}>EPC 17</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('epc19')}>EPC 19</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('epc25')}>EPC 25</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('epc27')}>EPC 27</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('epc30')}>EPC 30</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('epc39')}>EPC 39</SidebarItem>
-        </SidebarMenu>
-      </Sidebar>
     </>
   );
 };

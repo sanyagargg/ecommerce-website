@@ -1,8 +1,8 @@
 export const aboutObj1 = {
   id: 'aboutObj1',
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
   topLine: 'Why Us',
   headline: 'Why Choose Charismatic Electronics?',
   description: 'At Charismatic Electronics, we are committed not only to providing quality, timely delivery, and competitive prices, but also to understanding the complexities of manufacturing and design. Backed by a sound financial foundation, we ensure our reliability as a preferred supply chain partner for all OEMs and ODMs.',
@@ -10,16 +10,16 @@ export const aboutObj1 = {
   imgStart: false,
   img: '',
   alt: '',
-  dark: true,
-  primary: true,
-  darkText: false,
+  dark: false,
+  primary: false,
+  darkText: true,
 };
 
 export const aboutObj2 = {
   id: 'aboutObj2',
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
   topLine: 'Our Vision',
   headline: 'Empowering Growth with Trust',
   description: [
@@ -31,16 +31,16 @@ export const aboutObj2 = {
   imgStart: true,
   img: '',
   alt: '',
-  dark: false,
-  primary: false,
-  darkText: true,
+  dark: true,
+  primary: true,
+  darkText: false,
 };
 
 export const aboutObj3 = {
   id: 'aboutObj3',
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
   topLine: 'Core Values',
   headline: 'CHEL Core Values',
   description: [
@@ -53,16 +53,16 @@ export const aboutObj3 = {
   imgStart: false,
   img: '',
   alt: '',
-  dark: true,
-  primary: true,
-  darkText: false,
+  dark: false,
+  primary: false,
+  darkText: true,
 };
 
 export const aboutObj4 = {
   id: 'aboutObj4',
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
   topLine: 'Quality Policy',
   headline: 'Reliable. Efficient. Customer-Centric.',
   description: [
@@ -80,16 +80,16 @@ export const aboutObj4 = {
   imgStart: true,
   img: '',
   alt: '',
-  dark: false,
-  primary: false,
-  darkText: true,
+  dark: true,
+  primary: true,
+  darkText: false,
 };
 
 export const aboutObj5 = {
   id: 'aboutObj5',
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
   topLine: 'Manufacturing Capabilities',
   headline: 'Winding, Automation, Testing, Quality, Exports',
   description: [
@@ -101,16 +101,16 @@ export const aboutObj5 = {
   imgStart: false,
   img: '',
   alt: '',
-  dark: true,
-  primary: true,
-  darkText: false,
+  dark: false,
+  primary: false,
+  darkText: true,
 };
 
 export const aboutObj6 = {
   id: 'aboutObj6',
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
   topLine: 'Technical Capabilities',
   headline: 'Built to Perform: Sustainable, Safe & Standards-Compliant"',
   description:[
@@ -125,16 +125,16 @@ export const aboutObj6 = {
   imgStart: true,
   img: '',
   alt: '',
-  dark: false,
-  primary: false,
-  darkText: true,
+  dark: true,
+  primary: true,
+  darkText: false,
 };
 
 export const aboutObj7 = {
   id: 'aboutObj7',
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
   topLine: 'Industries Served',
   headline: 'Powering Innovation Across Industries',
   description:[
@@ -150,7 +150,7 @@ export const aboutObj7 = {
   imgStart: false,
   img: '',
   alt: '',
-  dark: true,
-  primary: true,
-  darkText: false,
+  dark: false,
+  primary: false,
+  darkText: true,
 };
