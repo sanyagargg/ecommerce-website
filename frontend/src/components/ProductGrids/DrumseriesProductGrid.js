@@ -20,11 +20,11 @@ import {
 
 import GetQuote from './GetQuote';  // Import GetQuote component
 
-import drum6x8 from '../../images/drumseriesimages/drum6x8.jpg';
-import drum8x10 from '../../images/drumseriesimages/drum8x10.jpg';
-import drum10x12 from '../../images/drumseriesimages/drum10x12.jpg';
-import drum12x15 from '../../images/drumseriesimages/drum12x15.jpg';
-import drum15x22 from '../../images/drumseriesimages/drum15x22.jpg';
+import drum6x8 from '../../images/drumseriesimages/drum6X8.jpg';
+import drum8x10 from '../../images/drumseriesimages/drum8X10.jpg';
+import drum10x12 from '../../images/drumseriesimages/drum10X12.jpg';
+import drum12x15 from '../../images/drumseriesimages/drum12X15.jpg';
+import drum15x22 from '../../images/drumseriesimages/drum15X22.jpg';
 
 import drum6x8PDF from '../../pdfs/drumseriespdfs/drum6x8.pdf';
 import drum8x10PDF from '../../pdfs/drumseriespdfs/drum8x10.pdf';
