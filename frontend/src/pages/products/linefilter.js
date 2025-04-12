@@ -1,5 +1,5 @@
 import React from 'react'
-import LineFilterHeroSection from '../../components/ProductsHeroSection/LineFilterHero'
+import LineFilterseriesProductGrid from '../../components/ProductGrids/ECseriesProductGrid'
 import LineFilterNavbar from '../../components/ProductsNavbar/LineFilterNavbar'
 import Footer from '../../components/Footer'
 
@@ -7,7 +7,7 @@ function linefilter() {
   return (
     <>
     <LineFilterNavbar />
-    <LineFilterHeroSection />
+    <LineFilterseriesProductGrid />
     <Footer />
     </>
   )

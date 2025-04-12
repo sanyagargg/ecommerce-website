@@ -1,5 +1,5 @@
 import React from 'react'
-import DrumCoilsHeroSection from '../../components/ProductsHeroSection/DrumCoilsHero'
+import DrumseriesProductGrid from '../../components/ProductGrids/DrumseriesProductGrid'
 import DrumCoilsNavbar from '../../components/ProductsNavbar/DrumCoilsNavbar'
 import Footer from '../../components/Footer'
 
@@ -7,7 +7,7 @@ function drumcoils() {
   return (
     <>
     <DrumCoilsNavbar />
-    <DrumCoilsHeroSection />
+    <DrumseriesProductGrid />
     <Footer />
     </>
   )

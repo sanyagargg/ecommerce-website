@@ -1,13 +1,13 @@
 import React from 'react'
 import RMSeriesNavbar from '../../../components/ProductsNavbar/RMseriesNavbar'
-import RMSeriesHeroSection from '../../../components/ProductsHeroSection/RMseriesHero'
+import RMseriesProductGrid from '../../../components/ProductGrids/RMseriesProductGrid'
 import Footer from '../../../components/Footer'
 
 function RMseries() {
   return (
     <>
     <RMSeriesNavbar />
-    <RMSeriesHeroSection />
+    <RMseriesProductGrid/>
     <Footer />
     </>
   )

@@ -1,13 +1,13 @@
 import React from 'react'
 import BitRodCoilsNavbar from '../../components/ProductsNavbar/BitRodCoilsNavbar'
-import BitRodCoilsHeroSection from '../../components/ProductsHeroSection/BitRodCoilsHero'
+import BitRodseriesProductGrid from '../../components/ProductGrids/BitRodseriesProductGrid'
 import Footer from '../../components/Footer'
 
 function bitrodcoil() {
   return (
     <>
     <BitRodCoilsNavbar />
-    <BitRodCoilsHeroSection />
+    <BitRodseriesProductGrid.js />
     <Footer />
     </>
   )

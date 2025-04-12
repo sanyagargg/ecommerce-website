@@ -9,7 +9,7 @@ import {
   MobileIcon,
   NavMenu,
   NavItem,
-  NavLinks,
+  NavRouteLink,
   NavBtn,
   SearchIconWrapper
 } from './NavbarElements';
@@ -49,75 +49,28 @@ const Navbar = ({ toggle }) => {
 
           <NavMenu>
             <NavItem>
-              <NavLinks
-                to="about"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                activeClass="active"
-              >
-                About
-              </NavLinks>
+              <NavRouteLink to="/about">About</NavRouteLink>
             </NavItem>
-
             <NavItem>
-              <NavLinks
-                to="products"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                activeClass="active"
-              >
-                Products
-              </NavLinks>
+              <NavRouteLink to="/products">Products</NavRouteLink>
             </NavItem>
-            
-
             <NavItem>
-              <NavLinks
-                to="gallery"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                activeClass="active"
-              >
-                Gallery    
-              </NavLinks>
+              <NavRouteLink to="/gallery">Gallery</NavRouteLink>
             </NavItem>
-
             <NavItem>
-              <NavLinks
-                to="contact"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                activeClass="active"
-              >
-                Contact
-              </NavLinks>
+              <NavRouteLink to="/contact">Contact</NavRouteLink>
             </NavItem>
-
             <NavItem>
-              <NavLinks
-                to="quote"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                activeClass="active"
-              >
-                Get a Quote
-              </NavLinks>
+              <NavRouteLink to="/quote">Get a Quote</NavRouteLink>
+            </NavItem>
+            <NavItem>
+              <NavRouteLink to="/careers">Careers</NavRouteLink>
             </NavItem>
           </NavMenu>
 
           <NavBtn>
             <SearchIconWrapper>
-              {/* <FaSearch /> */}
+              {/* Optional: <FaSearch /> */}
             </SearchIconWrapper>
           </NavBtn>
         </NavbarContainer>

@@ -1,13 +1,13 @@
 import React from 'react'
 import ECSeriesNavbar from '../../../components/ProductsNavbar/ECseriesNavbar'
-import ECSeriesHeroSection from '../../../components/ProductsHeroSection/ECseriesHero'
+import ECseriesProductGrid from '../../../components/ProductGrids/ECseriesProductGrid'
 import Footer from '../../../components/Footer'
 
 function ECseries() {
   return (
     <>
     <ECSeriesNavbar />
-    <ECSeriesHeroSection />
+    <ECseriesProductGrid />
     <Footer />
     </>
   )

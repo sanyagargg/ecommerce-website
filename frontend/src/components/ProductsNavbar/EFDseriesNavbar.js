@@ -46,9 +46,6 @@ const EFDSeriesNavbar = () => {
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLeft>
-            <MobileIcon onClick={toggleSidebar}>
-              <FaBars />
-            </MobileIcon>
             <NavLogo onClick={goToHome}>
               <img src="/charismaticlogo.webp" alt="Logo" />
             </NavLogo>
@@ -56,22 +53,6 @@ const EFDSeriesNavbar = () => {
           </NavLeft>
         </NavbarContainer>
       </Nav>
-
-      <Sidebar isOpen={isOpen}>
-        <CloseIcon onClick={toggleSidebar}>&times;</CloseIcon>
-        <SidebarMenu>
-          <SidebarItem onClick={() => handleNavigate('efd10')}>EFD 10</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('efd12')}>EFD 12</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('efd15')}>EFD 15</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('efd20')}>EFD 20</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('efd21')}>EFD 21</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('efd25')}>EFD 25</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('efd30')}>EFD 30</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('efd31')}>EFD 31</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('efd34')}>EFD 34</SidebarItem>
-          <SidebarItem onClick={() => handleNavigate('efd40')}>EFD 40</SidebarItem>
-        </SidebarMenu>
-      </Sidebar>
     </>
   );
 };

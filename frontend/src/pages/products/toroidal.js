@@ -1,13 +1,13 @@
 import React from 'react'
 import ToroidalCoilsNavbar from '../../components/ProductsNavbar/ToroidalNavbar'
-import ToroidalCoilsHeroSection from '../../components/ProductsHeroSection/ToroidalHero'
+import ToroidalseriesProductGrid from '../../components/ProductGrids/ToroidalseriesProductGrid'
 import Footer from '../../components/Footer'
 
 function toroidal() {
   return (
     <>
     <ToroidalCoilsNavbar />
-    <ToroidalCoilsHeroSection />
+    <ToroidalseriesProductGrid />
     <Footer />
     </>
   )

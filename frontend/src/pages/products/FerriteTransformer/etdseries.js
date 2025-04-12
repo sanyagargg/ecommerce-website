@@ -1,5 +1,5 @@
 import React from 'react'
-import ETDSeriesHeroSection from '../../../components/ProductsHeroSection/ETDseriesHero'
+import ETDseriesProductGrid from '../../../components/ProductGrids/ECseriesProductGrid'
 import ETDSeriesNavbar from '../../../components/ProductsNavbar/ETDseriesNavbar'
 import Footer from '../../../components/Footer'
 
@@ -7,7 +7,7 @@ function ETDseries() {
   return (
     <>
     <ETDSeriesNavbar />
-    <ETDSeriesHeroSection />
+    <ETDseriesProductGrid />
     <Footer />
     </>
   )

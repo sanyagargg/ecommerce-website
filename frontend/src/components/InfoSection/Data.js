@@ -6,11 +6,11 @@ export const homeObjOne = {
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'About Us',
+    topLine: '',
     headline: 'At Charismatic Electronics',
     description: 'We aspire to be the trusted partner for businesses worldwide, providing advanced solutions such as SMPS Transformers, Toroidal Coils, Drum Coil Inductors, Power Inductors, and Return Line Filters. Through our commitment to innovation, sustainability, and unmatched craftsmanship, we aim to drive progress across industries, from renewable energy to advanced manufacturing and beyond.',
     buttonLabel: 'Know More',
-    buttonLink: '/about', //  This is the route it will go to
+    buttonLink: '/about', //  This is the route it will go to /about
     imgStart: false,
     img: aboutImage,
     alt: 'Aboutus',

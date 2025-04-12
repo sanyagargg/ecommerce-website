@@ -75,6 +75,7 @@ export const NavItem = styled.li`
   height: 80px;
 `;
 
+// Link for scrolling (same as before)
 export const NavLinks = styled(LinkS)`
   color: #fff;
   display: flex;
@@ -86,6 +87,21 @@ export const NavLinks = styled(LinkS)`
 
   &.active {
     border-bottom: 3px solid #F39540;
+  }
+`;
+
+// 🟢 NEW — Link for routing to /about
+export const NavRouteLink = styled(LinkR)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+
+  &:hover {
+    color: #F39540;
   }
 `;
 
