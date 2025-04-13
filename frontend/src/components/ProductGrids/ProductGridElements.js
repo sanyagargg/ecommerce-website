@@ -119,7 +119,7 @@ export const ModalImage = styled.img`
   object-fit: cover;
 `;
 
-export const ModalForm = styled.div`
+export const ModalForm = styled.form`
   width: 50%;
   padding: 30px;
   display: flex;
@@ -155,6 +155,7 @@ export const ModalForm = styled.div`
   }
 `;
 
+
 export const CloseButton = styled.button`
   position: absolute;
   top: 10px;
@@ -164,6 +165,7 @@ export const CloseButton = styled.button`
   font-size: 24px;
   cursor: pointer;
 `;
+
 
 // PDF Modal (for product drawing)
 export const PDFModalWrapper = styled.div`

@@ -12,12 +12,13 @@ import {
   ModalWrapper,
   ModalContent,
   ModalImage,
-  ModalForm,
   CloseButton,
   PDFModalWrapper,
   PDFModalContent,
   PDFIframe,
 } from './ProductGridElements';
+
+import GetQuote from './GetQuote';  // Import the GetQuote component
 
 // Import images
 import ee10X5X5 from '../../images/eeseriesimages/ee10X5X5.jpg';
@@ -83,7 +84,8 @@ const products = [
   { id: 19, title: 'EE 65', img: ee65, pdf: ee65PDF },
 ];
 
-const EESeriesProductsGridSection = () => {
+
+const EEseriesProductGrid = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showPDF, setShowPDF] = useState(false);
   const [pdfSrc, setPdfSrc] = useState('');
@@ -97,7 +99,7 @@ const EESeriesProductsGridSection = () => {
   };
 
   const handleDrawingClick = (product) => {
-    setPdfSrc(product.pdf); // Set PDF source
+    setPdfSrc(product.pdf);
     setShowPDF(true);
   };
 
@@ -131,31 +133,7 @@ const EESeriesProductsGridSection = () => {
           <ModalWrapper>
             <ModalContent>
               <ModalImage src={selectedProduct.img} alt={selectedProduct.title} />
-              <ModalForm>
-                <h2>Get a Quote for {selectedProduct.title}</h2>
-                <input type="text" placeholder="Your Name" />
-                <input type="email" placeholder="Your Email" />
-                <input type="tel" placeholder="Phone" />
-                <input type="text" placeholder="Your Company Name" />
-                <input type="text" placeholder="Your Company Address" />
-
-                <div style={{ display: 'flex', gap: '10px' }}>
-                  <div style={{ flex: 1 }}>
-                    <input type="text" placeholder="City" name="city" required />
-                  </div>
-                  <div style={{ flex: 1 }}>
-                    <input type="text" name="state" placeholder="State" required />
-                  </div>
-                  <div style={{ flex: 1 }}>
-                    <input type="text" name="postalCode" placeholder="ZIP Code" required />
-                  </div>
-                </div>
-
-                <input type="text" placeholder="Country" />
-
-                <textarea placeholder="Your Requirements" rows={4}></textarea>
-                <button type="submit">Submit</button>
-              </ModalForm>
+              <GetQuote productTitle={selectedProduct.title} /> {/* Use the GetQuote component */}
               <CloseButton onClick={handleCloseModal}>×</CloseButton>
             </ModalContent>
           </ModalWrapper>
@@ -176,4 +154,4 @@ const EESeriesProductsGridSection = () => {
   );
 };
 
-export default EESeriesProductsGridSection;
+export default EEseriesProductGrid;

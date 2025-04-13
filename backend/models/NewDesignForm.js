@@ -22,5 +22,5 @@ const NewDesignFormSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('NewDesignForm', NewDesignFormSchema);
+module.exports = mongoose.model('NewDesignForm', NewDesignFormSchema, 'newdesignforms');
 

@@ -1,10 +1,10 @@
-//Handles form logic (saving data, sending emails/SMS)
-//Handles the logic of saving data to the database
+// Handles form logic (saving data, sending emails/SMS)
+// Handles the logic of saving data to the database
 
-const NewDesign = require('../models/NewDesignForm');
+const GetQuoteForm = require('../models/GetQuoteForm');
 const sendEmail = require('../utils/email');
 
-const handleNewDesignSubmission = async (req, res) => {
+const handleGetQuoteSubmission = async (req, res) => {
   try {
     console.log('Received submission:', req.body); // <== Add this
     const {
@@ -15,7 +15,7 @@ const handleNewDesignSubmission = async (req, res) => {
 
     const filePath = req.file ? req.file.path : null;
 
-    const newEntry = new NewDesign({
+    const newEntry = new GetQuoteForm({
       name,
       email,
       phone,
@@ -31,6 +31,7 @@ const handleNewDesignSubmission = async (req, res) => {
 
     await newEntry.save();
 
+    // Send email notification
     await sendEmail({ ...req.body, file: filePath });
 
     res.status(200).json({ message: 'Form submitted and email sent successfully.' });
@@ -40,5 +41,4 @@ const handleNewDesignSubmission = async (req, res) => {
   }
 };
 
-module.exports = { handleNewDesignSubmission };
-
+module.exports = { handleGetQuoteSubmission };
