@@ -4,6 +4,7 @@ import Video from '../../videos/Untitled1.mp4'
 import {
     HeroContainer,
     HeroBg,
+    VideoBgWrapper,
     VideoBg,
     HeroContent,
     HeroH1,
@@ -25,7 +26,18 @@ const HeroSection = () => {
     return (
         <HeroContainer id="home">
             <HeroBg>
-                <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
+                <VideoBgWrapper>
+                    <VideoBg
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        disablePictureInPicture
+                        controls={false}
+                        src={Video}
+                        type='video/mp4'
+                    />
+                </VideoBgWrapper>
             </HeroBg>
             <HeroContent>
                 <HeroH1 className='text-3xl'>Charismatic Electronics</HeroH1>

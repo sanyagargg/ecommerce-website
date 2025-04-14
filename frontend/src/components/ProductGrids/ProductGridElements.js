@@ -3,9 +3,13 @@ import styled from 'styled-components';
 // Grid Layout
 export const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);  // Default: 4 items per row (desktop)
   gap: 20px;
   padding: 40px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);  // For mobile (up to 768px), 2 items per row
+  }
 `;
 
 export const GridItem = styled.div`
@@ -101,7 +105,7 @@ export const ModalWrapper = styled.div`
   border-radius: 10px;
   width: 80%;
   max-width: 900px;
-  height: 80%; /* Ensuring consistent height for both modals */
+  height: 80%;
   display: flex;
   overflow: hidden;
   position: relative;
@@ -155,7 +159,6 @@ export const ModalForm = styled.form`
   }
 `;
 
-
 export const CloseButton = styled.button`
   position: absolute;
   top: 10px;
@@ -166,14 +169,13 @@ export const CloseButton = styled.button`
   cursor: pointer;
 `;
 
-
 // PDF Modal (for product drawing)
 export const PDFModalWrapper = styled.div`
   background-color: white;
   border-radius: 10px;
   width: 80%;
   max-width: 900px;
-  height: 80%; /* Ensures the same height as the quote modal */
+  height: 80%;
   display: flex;
   position: relative;
 `;
@@ -189,4 +191,3 @@ export const PDFIframe = styled.iframe`
   height: 100%;
   border: none;
 `;
-

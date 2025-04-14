@@ -10,6 +10,7 @@ export const HeroContainer = styled.div`
     height: 800px;
     position: relative;
     z-index: 1;
+
     :before {
         content: '';
         position: absolute;
@@ -17,10 +18,9 @@ export const HeroContainer = styled.div`
         left: 0;
         right: 0;
         bottom: 0;
-        
         z-index: 2;
     }
-`;
+`
 
 export const HeroBg = styled.div`
     position: absolute;
@@ -31,15 +31,21 @@ export const HeroBg = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
-`;
+`
+
+export const VideoBgWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+`
 
 export const VideoBg = styled.video`
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
     object-fit: cover;
     background: #232a34;
-`;
+    user-select: none;
+`
 
 export const HeroContent = styled.div`
     z-index: 3;
@@ -52,9 +58,10 @@ export const HeroContent = styled.div`
 `
 
 export const HeroH1 = styled.h1`
-    color:rgb(8, 2, 81);
+    color: rgb(8, 2, 81);
     font-size: 48px;
     text-align: center;
+
     @media screen and (max-width: 768px) {
         font-size: 40px;
     }
@@ -92,6 +99,4 @@ export const ArrowForward = styled(MdArrowForward)`
     font-size: 20px;
 `
 
-export const ArrowRight = styled(MdKeyboardArrowRight)`
-
-`
+export const ArrowRight = styled(MdKeyboardArrowRight)``

@@ -16,8 +16,9 @@ const HeroSection = () => {
     <HeroContainer id="home">
       <HeroContentWrapper>
         <VideoWrapper>
-          <StyledVideo autoPlay loop muted src={Video} type="video/mp4" />
-        </VideoWrapper>
+  <StyledVideo autoPlay loop muted playsInline src={Video} type="video/mp4" />
+</VideoWrapper>
+
         <HeroContent>
           <HeroH1>Our Product Range</HeroH1>
           <HeroP>
