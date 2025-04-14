@@ -36,7 +36,7 @@ const GetQuote = ({ productTitle }) => {
     }
 
     try {
-      const res = await fetch('http://localhost:5000/api/getQuote', {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/getQuote`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

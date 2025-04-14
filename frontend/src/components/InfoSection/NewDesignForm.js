@@ -58,7 +58,7 @@ const NewDesignForm = ({ lightBg, id, imgStart, topLine, headline, description }
     }
 
     try {
-      const res = await fetch('http://localhost:5000/api/newDesign/newDesign', {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/newDesign/newDesign`, {
         method: 'POST',
         body: data
       });
