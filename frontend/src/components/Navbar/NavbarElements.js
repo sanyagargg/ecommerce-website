@@ -14,6 +14,12 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 10;
   transition: 0.8s all ease;
+
+  verflow-x: auto; /* Allow horizontal scroll on the navbar */
+  white-space: nowrap; /* Ensure items in the navbar stay in one line */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  display: flex; /* Arrange items horizontally */
+  list-style: none;
 `;
 
 export const NavbarContainer = styled.div`

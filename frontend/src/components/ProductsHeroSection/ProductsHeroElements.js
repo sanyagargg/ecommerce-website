@@ -61,7 +61,7 @@ export const VideoWrapper = styled.div`
 
 export const StyledVideo = styled.video`
   width: 100%;
-  height: 650px;
+  height: 850px;
   object-fit: cover;
   border-radius: 10px; /* Add rounded corners to video */
   

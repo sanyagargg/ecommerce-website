@@ -6,16 +6,40 @@
   font-family: 'Encode Sans Expanded', sans-serif;
 }
 
-/* Prevent horizontal scroll on layout only — NOT on scrollable children like navbars */
+/* Ensure the body fits the screen width without any horizontal scroll */
 body {
-  overflow-x: hidden;
-  max-width: 100vw;
-  position: relative;
+  width: 100%; /* Ensure body takes full width of the viewport */
+  height: 100%; /* Ensure body takes full height of the viewport */
+  overflow-x: hidden; /* Prevent horizontal scrolling by default */
 }
 
-/* Let navbar scroll horizontally */
-.scrollable-navbar {
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+/* Prevent overflow caused by specific elements (e.g., images or wide divs) */
+html, body {
+  max-width: 100%; /* Ensure no content exceeds the viewport width */
+  overflow-x: hidden; /* Prevent any horizontal scroll from being added */
+}
+
+/* Ensure the page content fits within the viewport without overflow */
+.page-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent any horizontal overflow */
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden; /* Ensure no horizontal scroll on mobile devices */
+  }
+
+  .container {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll inside containers */
+  }
+
+  /* Ensure any images or elements inside are responsive and scale properly */
+  img, iframe, video {
+    max-width: 100%; /* Ensure media fits within the container */
+    height: auto; /* Maintain aspect ratio */
+  }
 }
