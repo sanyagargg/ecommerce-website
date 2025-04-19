@@ -10,6 +10,7 @@ import {
   ButtonsWrapper,
   ModalOverlay,
   ModalWrapper,
+  ModalFormWrapper,
   ModalContent,
   ModalImage,
   CloseButton,
@@ -119,7 +120,7 @@ const EEseriesProductGrid = () => {
                   Get a Quote
                 </QuoteButton>
                 <DrawingButton onClick={() => handleDrawingClick(product)}>
-                  Product Drawing
+                Bobbin Drawing
                 </DrawingButton>
               </ButtonsWrapper>
             </Overlay>
@@ -131,11 +132,15 @@ const EEseriesProductGrid = () => {
       {selectedProduct && (
         <ModalOverlay>
           <ModalWrapper>
-            <ModalContent>
-              <ModalImage src={selectedProduct.img} alt={selectedProduct.title} />
-              <GetQuote productTitle={selectedProduct.title} /> {/* Use the GetQuote component */}
-              <CloseButton onClick={handleCloseModal}>×</CloseButton>
-            </ModalContent>
+          <div className="ModalContent">
+  <img className="ModalImage" src={selectedProduct.img} alt={selectedProduct.title} />
+  <div className="ModalFormWrapper">
+    <GetQuote productTitle={selectedProduct.title} />
+  </div>
+  <button className="CloseButton" onClick={handleCloseModal}>×</button>
+</div>
+
+
           </ModalWrapper>
         </ModalOverlay>
       )}

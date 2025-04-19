@@ -55,7 +55,7 @@ const products = [
   { id: 10, title: 'POT40/28', img: pot4028, pdf: pot4028PDF },
 ];
 
-const POTseriesProductGrid = () => {
+const EEseriesProductGrid = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showPDF, setShowPDF] = useState(false);
   const [pdfSrc, setPdfSrc] = useState('');
@@ -69,7 +69,7 @@ const POTseriesProductGrid = () => {
   };
 
   const handleDrawingClick = (product) => {
-    setPdfSrc(product.pdf); // Set PDF source
+    setPdfSrc(product.pdf);
     setShowPDF(true);
   };
 
@@ -89,7 +89,7 @@ const POTseriesProductGrid = () => {
                   Get a Quote
                 </QuoteButton>
                 <DrawingButton onClick={() => handleDrawingClick(product)}>
-                  Product Drawing
+                Bobbin Drawing
                 </DrawingButton>
               </ButtonsWrapper>
             </Overlay>
@@ -101,11 +101,15 @@ const POTseriesProductGrid = () => {
       {selectedProduct && (
         <ModalOverlay>
           <ModalWrapper>
-            <ModalContent>
-              <ModalImage src={selectedProduct.img} alt={selectedProduct.title} />
-              <GetQuote product={selectedProduct} /> {/* Render GetQuote component */}
-              <CloseButton onClick={handleCloseModal}>×</CloseButton>
-            </ModalContent>
+          <div className="ModalContent">
+  <img className="ModalImage" src={selectedProduct.img} alt={selectedProduct.title} />
+  <div className="ModalFormWrapper">
+    <GetQuote productTitle={selectedProduct.title} />
+  </div>
+  <button className="CloseButton" onClick={handleCloseModal}>×</button>
+</div>
+
+
           </ModalWrapper>
         </ModalOverlay>
       )}
@@ -124,4 +128,4 @@ const POTseriesProductGrid = () => {
   );
 };
 
-export default POTseriesProductGrid;
+export default EEseriesProductGrid;

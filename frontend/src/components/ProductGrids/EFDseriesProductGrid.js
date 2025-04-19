@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   GridContainer,
   GridItem,
@@ -7,8 +7,19 @@ import {
   QuoteButton,
   DrawingButton,
   GridTitle,
-  ButtonsWrapper
-} from './ProductGridElements'; 
+  ButtonsWrapper,
+  ModalOverlay,
+  ModalWrapper,
+  ModalFormWrapper,
+  ModalContent,
+  ModalImage,
+  CloseButton,
+  PDFModalWrapper,
+  PDFModalContent,
+  PDFIframe,
+} from './ProductGridElements';
+
+import GetQuote from './GetQuote'; 
 
 // Import images for EFD series
 import efd10 from '../../images/efdseriesimages/efd-10.jpg';
@@ -35,23 +46,77 @@ const products = [
   { id: 10, title: 'EFD-40', img: efd40 },
 ];
 
-const EFDseriesProductsGridSection = () => {
+const EEseriesProductGrid = () => {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [showPDF, setShowPDF] = useState(false);
+  const [pdfSrc, setPdfSrc] = useState('');
+
+  const handleQuoteClick = (product) => {
+    setSelectedProduct(product);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProduct(null);
+  };
+
+  const handleDrawingClick = (product) => {
+    setPdfSrc(product.pdf);
+    setShowPDF(true);
+  };
+
+  const handleClosePDFModal = () => {
+    setShowPDF(false);
+  };
+
   return (
-    <GridContainer>
-      {products.map(product => (
-        <GridItem key={product.id}>
-          <GridImage src={product.img} alt={product.title} />
-          <Overlay>
-            <ButtonsWrapper>
-              <QuoteButton>Get a Quote</QuoteButton>
-              <DrawingButton>Product Drawing</DrawingButton>
-            </ButtonsWrapper>
-          </Overlay>
-          <GridTitle>{product.title}</GridTitle>
-        </GridItem>
-      ))}
-    </GridContainer>
+    <>
+      <GridContainer>
+        {products.map((product) => (
+          <GridItem key={product.id}>
+            <GridImage src={product.img} alt={product.title} />
+            <Overlay>
+              <ButtonsWrapper>
+                <QuoteButton onClick={() => handleQuoteClick(product)}>
+                  Get a Quote
+                </QuoteButton>
+                <DrawingButton onClick={() => handleDrawingClick(product)}>
+                Bobbin Drawing
+                </DrawingButton>
+              </ButtonsWrapper>
+            </Overlay>
+            <GridTitle>{product.title}</GridTitle>
+          </GridItem>
+        ))}
+      </GridContainer>
+
+      {selectedProduct && (
+        <ModalOverlay>
+          <ModalWrapper>
+          <div className="ModalContent">
+  <img className="ModalImage" src={selectedProduct.img} alt={selectedProduct.title} />
+  <div className="ModalFormWrapper">
+    <GetQuote productTitle={selectedProduct.title} />
+  </div>
+  <button className="CloseButton" onClick={handleCloseModal}>×</button>
+</div>
+
+
+          </ModalWrapper>
+        </ModalOverlay>
+      )}
+
+      {showPDF && (
+        <ModalOverlay>
+          <PDFModalWrapper>
+            <PDFModalContent>
+              <PDFIframe src={pdfSrc} />
+            </PDFModalContent>
+            <CloseButton onClick={handleClosePDFModal}>×</CloseButton>
+          </PDFModalWrapper>
+        </ModalOverlay>
+      )}
+    </>
   );
 };
 
-export default EFDseriesProductsGridSection;
+export default EEseriesProductGrid;

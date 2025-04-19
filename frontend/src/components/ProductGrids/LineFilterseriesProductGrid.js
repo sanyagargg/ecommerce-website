@@ -46,7 +46,7 @@ const products = [
   { id: 7, title: 'ET24', img: et24, pdf: et24PDF },
 ];
 
-const LineFilterseriesProductGrid = () => {
+const EEseriesProductGrid = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showPDF, setShowPDF] = useState(false);
   const [pdfSrc, setPdfSrc] = useState('');
@@ -80,7 +80,7 @@ const LineFilterseriesProductGrid = () => {
                   Get a Quote
                 </QuoteButton>
                 <DrawingButton onClick={() => handleDrawingClick(product)}>
-                  Product Drawing
+                Bobbin Drawing
                 </DrawingButton>
               </ButtonsWrapper>
             </Overlay>
@@ -92,11 +92,15 @@ const LineFilterseriesProductGrid = () => {
       {selectedProduct && (
         <ModalOverlay>
           <ModalWrapper>
-            <ModalContent>
-              <ModalImage src={selectedProduct.img} alt={selectedProduct.title} />
-              <GetQuote productTitle={selectedProduct.title} /> {/* Use the GetQuote component */}
-              <CloseButton onClick={handleCloseModal}>×</CloseButton>
-            </ModalContent>
+          <div className="ModalContent">
+  <img className="ModalImage" src={selectedProduct.img} alt={selectedProduct.title} />
+  <div className="ModalFormWrapper">
+    <GetQuote productTitle={selectedProduct.title} />
+  </div>
+  <button className="CloseButton" onClick={handleCloseModal}>×</button>
+</div>
+
+
           </ModalWrapper>
         </ModalOverlay>
       )}
@@ -115,4 +119,4 @@ const LineFilterseriesProductGrid = () => {
   );
 };
 
-export default LineFilterseriesProductGrid;
+export default EEseriesProductGrid;

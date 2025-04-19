@@ -46,73 +46,78 @@ const products = [
   { id: 6, title: 'ETD-44', img: etd44, pdf: etd44PDF },
   ];
 
-const ETDseriesProductGrid = () => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [showPDF, setShowPDF] = useState(false);
-  const [pdfSrc, setPdfSrc] = useState('');
-
-  const handleQuoteClick = (product) => {
-    setSelectedProduct(product);
+  const EEseriesProductGrid = () => {
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [showPDF, setShowPDF] = useState(false);
+    const [pdfSrc, setPdfSrc] = useState('');
+  
+    const handleQuoteClick = (product) => {
+      setSelectedProduct(product);
+    };
+  
+    const handleCloseModal = () => {
+      setSelectedProduct(null);
+    };
+  
+    const handleDrawingClick = (product) => {
+      setPdfSrc(product.pdf);
+      setShowPDF(true);
+    };
+  
+    const handleClosePDFModal = () => {
+      setShowPDF(false);
+    };
+  
+    return (
+      <>
+        <GridContainer>
+          {products.map((product) => (
+            <GridItem key={product.id}>
+              <GridImage src={product.img} alt={product.title} />
+              <Overlay>
+                <ButtonsWrapper>
+                  <QuoteButton onClick={() => handleQuoteClick(product)}>
+                    Get a Quote
+                  </QuoteButton>
+                  <DrawingButton onClick={() => handleDrawingClick(product)}>
+                  Bobbin Drawing
+                  </DrawingButton>
+                </ButtonsWrapper>
+              </Overlay>
+              <GridTitle>{product.title}</GridTitle>
+            </GridItem>
+          ))}
+        </GridContainer>
+  
+        {selectedProduct && (
+          <ModalOverlay>
+            <ModalWrapper>
+            <div className="ModalContent">
+    <img className="ModalImage" src={selectedProduct.img} alt={selectedProduct.title} />
+    <div className="ModalFormWrapper">
+      <GetQuote productTitle={selectedProduct.title} />
+    </div>
+    <button className="CloseButton" onClick={handleCloseModal}>×</button>
+  </div>
+  
+  
+            </ModalWrapper>
+          </ModalOverlay>
+        )}
+  
+        {showPDF && (
+          <ModalOverlay>
+            <PDFModalWrapper>
+              <PDFModalContent>
+                <PDFIframe src={pdfSrc} />
+              </PDFModalContent>
+              <CloseButton onClick={handleClosePDFModal}>×</CloseButton>
+            </PDFModalWrapper>
+          </ModalOverlay>
+        )}
+      </>
+    );
   };
-
-  const handleCloseModal = () => {
-    setSelectedProduct(null);
-  };
-
-  const handleDrawingClick = (product) => {
-    setPdfSrc(product.pdf);
-    setShowPDF(true);
-  };
-
-  const handleClosePDFModal = () => {
-    setShowPDF(false);
-  };
-
-  return (
-    <>
-      <GridContainer>
-        {products.map((product) => (
-          <GridItem key={product.id}>
-            <GridImage src={product.img} alt={product.title} />
-            <Overlay>
-              <ButtonsWrapper>
-                <QuoteButton onClick={() => handleQuoteClick(product)}>
-                  Get a Quote
-                </QuoteButton>
-                <DrawingButton onClick={() => handleDrawingClick(product)}>
-                  Product Drawing
-                </DrawingButton>
-              </ButtonsWrapper>
-            </Overlay>
-            <GridTitle>{product.title}</GridTitle>
-          </GridItem>
-        ))}
-      </GridContainer>
-
-      {selectedProduct && (
-        <ModalOverlay>
-          <ModalWrapper>
-            <ModalContent>
-              <ModalImage src={selectedProduct.img} alt={selectedProduct.title} />
-              <GetQuote productTitle={selectedProduct.title} /> {/* Use the GetQuote component */}
-              <CloseButton onClick={handleCloseModal}>×</CloseButton>
-            </ModalContent>
-          </ModalWrapper>
-        </ModalOverlay>
-      )}
-
-      {showPDF && (
-        <ModalOverlay>
-          <PDFModalWrapper>
-            <PDFModalContent>
-              <PDFIframe src={pdfSrc} />
-            </PDFModalContent>
-            <CloseButton onClick={handleClosePDFModal}>×</CloseButton>
-          </PDFModalWrapper>
-        </ModalOverlay>
-      )}
-    </>
-  );
-};
-
-export default ETDseriesProductGrid;
+  
+  export default EEseriesProductGrid;
+  

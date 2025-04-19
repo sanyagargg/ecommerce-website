@@ -64,7 +64,7 @@ const products = [
   { id: 13, title: 'T36', img: T36, pdf: T36PDF },
 ];
 
-const ToroidalseriesProductGrid = () => {
+const EEseriesProductGrid = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showPDF, setShowPDF] = useState(false);
   const [pdfSrc, setPdfSrc] = useState('');
@@ -98,7 +98,7 @@ const ToroidalseriesProductGrid = () => {
                   Get a Quote
                 </QuoteButton>
                 <DrawingButton onClick={() => handleDrawingClick(product)}>
-                  Product Drawing
+                Bobbin Drawing
                 </DrawingButton>
               </ButtonsWrapper>
             </Overlay>
@@ -110,11 +110,15 @@ const ToroidalseriesProductGrid = () => {
       {selectedProduct && (
         <ModalOverlay>
           <ModalWrapper>
-            <ModalContent>
-              <ModalImage src={selectedProduct.img} alt={selectedProduct.title} />
-              <GetQuote productTitle={selectedProduct.title} /> {/* Use the GetQuote component */}
-              <CloseButton onClick={handleCloseModal}>×</CloseButton>
-            </ModalContent>
+          <div className="ModalContent">
+  <img className="ModalImage" src={selectedProduct.img} alt={selectedProduct.title} />
+  <div className="ModalFormWrapper">
+    <GetQuote productTitle={selectedProduct.title} />
+  </div>
+  <button className="CloseButton" onClick={handleCloseModal}>×</button>
+</div>
+
+
           </ModalWrapper>
         </ModalOverlay>
       )}
@@ -133,4 +137,4 @@ const ToroidalseriesProductGrid = () => {
   );
 };
 
-export default ToroidalseriesProductGrid;
+export default EEseriesProductGrid;

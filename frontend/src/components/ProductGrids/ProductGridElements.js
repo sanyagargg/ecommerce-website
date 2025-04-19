@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 
 // Grid Layout
+// ProductGridElements.js
+
 export const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);  // Default: 4 items per row (desktop)
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 40px;
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);  // For mobile (up to 768px), 2 items per row
+    grid-template-columns: repeat(2, 1fr);  // For mobile, 2 items per row
   }
 `;
+
 
 export const GridItem = styled.div`
   position: relative;
@@ -107,8 +110,13 @@ export const ModalWrapper = styled.div`
   max-width: 900px;
   height: 80%;
   display: flex;
+  flex-direction: column; /* Default layout for mobile */
   overflow: hidden;
   position: relative;
+
+  @media (min-width: 768px) {
+    flex-direction: row; /* Desktop layout: Image on the left, form on the right */
+  }
 `;
 
 export const ModalContent = styled.div`
@@ -118,33 +126,43 @@ export const ModalContent = styled.div`
 `;
 
 export const ModalImage = styled.img`
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: 25vh; /* Full width on mobile with 25vh height */
   object-fit: cover;
+
+  @media (min-width: 768px) {
+    width: 50%; /* Image takes 50% of the width on desktop */
+    height: 100%; /* Full height of the modal on desktop */
+  }
+`;
+
+export const ModalFormWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  @media (min-width: 768px) {
+    width: 50%; /* Form takes 50% width on desktop */
+    padding: 30px;
+  }
 `;
 
 export const ModalForm = styled.form`
-  width: 50%;
-  padding: 30px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
-  height: 100%;
-  gap: 0.2px;
+  gap: 10px;
 
-  h2 {
-    margin-bottom: 20px;
-  }
-
-  input,
-  textarea {
-    margin-bottom: 15px;
+  input, textarea {
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-family: sans-serif;
     width: 100%;
-    box-sizing: border-box;
+    margin-bottom: 15px;
   }
 
   button {

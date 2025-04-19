@@ -10,14 +10,16 @@ import {
   ButtonsWrapper,
   ModalOverlay,
   ModalWrapper,
+  ModalFormWrapper,
   ModalContent,
   ModalImage,
-  ModalForm,
   CloseButton,
   PDFModalWrapper,
   PDFModalContent,
   PDFIframe,
 } from './ProductGridElements';
+
+import GetQuote from './GetQuote'; 
 
 import rm4 from '../../images/rmseriesimages/rm-4.jpg';
 import rm5 from '../../images/rmseriesimages/rm-5.jpg';
@@ -44,97 +46,78 @@ const products = [
     { id: 6, title: 'RM-12', img: rm12, pdf: rm12PDF },
   ];
   
-const RMseriesProductGrid = () => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [showPDF, setShowPDF] = useState(false);
-  const [pdfSrc, setPdfSrc] = useState('');
-
-  const handleQuoteClick = (product) => {
-    setSelectedProduct(product);
+  const EEseriesProductGrid = () => {
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [showPDF, setShowPDF] = useState(false);
+    const [pdfSrc, setPdfSrc] = useState('');
+  
+    const handleQuoteClick = (product) => {
+      setSelectedProduct(product);
+    };
+  
+    const handleCloseModal = () => {
+      setSelectedProduct(null);
+    };
+  
+    const handleDrawingClick = (product) => {
+      setPdfSrc(product.pdf);
+      setShowPDF(true);
+    };
+  
+    const handleClosePDFModal = () => {
+      setShowPDF(false);
+    };
+  
+    return (
+      <>
+        <GridContainer>
+          {products.map((product) => (
+            <GridItem key={product.id}>
+              <GridImage src={product.img} alt={product.title} />
+              <Overlay>
+                <ButtonsWrapper>
+                  <QuoteButton onClick={() => handleQuoteClick(product)}>
+                    Get a Quote
+                  </QuoteButton>
+                  <DrawingButton onClick={() => handleDrawingClick(product)}>
+                  Bobbin Drawing
+                  </DrawingButton>
+                </ButtonsWrapper>
+              </Overlay>
+              <GridTitle>{product.title}</GridTitle>
+            </GridItem>
+          ))}
+        </GridContainer>
+  
+        {selectedProduct && (
+          <ModalOverlay>
+            <ModalWrapper>
+            <div className="ModalContent">
+    <img className="ModalImage" src={selectedProduct.img} alt={selectedProduct.title} />
+    <div className="ModalFormWrapper">
+      <GetQuote productTitle={selectedProduct.title} />
+    </div>
+    <button className="CloseButton" onClick={handleCloseModal}>×</button>
+  </div>
+  
+  
+            </ModalWrapper>
+          </ModalOverlay>
+        )}
+  
+        {showPDF && (
+          <ModalOverlay>
+            <PDFModalWrapper>
+              <PDFModalContent>
+                <PDFIframe src={pdfSrc} />
+              </PDFModalContent>
+              <CloseButton onClick={handleClosePDFModal}>×</CloseButton>
+            </PDFModalWrapper>
+          </ModalOverlay>
+        )}
+      </>
+    );
   };
-
-  const handleCloseModal = () => {
-    setSelectedProduct(null);
-  };
-
-  const handleDrawingClick = (product) => {
-    setPdfSrc(product.pdf); // Set PDF source
-    setShowPDF(true);
-  };
-
-  const handleClosePDFModal = () => {
-    setShowPDF(false);
-  };
-
-  return (
-    <>
-      <GridContainer>
-        {products.map((product) => (
-          <GridItem key={product.id}>
-            <GridImage src={product.img} alt={product.title} />
-            <Overlay>
-              <ButtonsWrapper>
-                <QuoteButton onClick={() => handleQuoteClick(product)}>
-                  Get a Quote
-                </QuoteButton>
-                <DrawingButton onClick={() => handleDrawingClick(product)}>
-                  Product Drawing
-                </DrawingButton>
-              </ButtonsWrapper>
-            </Overlay>
-            <GridTitle>{product.title}</GridTitle>
-          </GridItem>
-        ))}
-      </GridContainer>
-
-      {selectedProduct && (
-        <ModalOverlay>
-          <ModalWrapper>
-            <ModalContent>
-              <ModalImage src={selectedProduct.img} alt={selectedProduct.title} />
-              <ModalForm>
-                <h2>Get a Quote for {selectedProduct.title}</h2>
-                <input type="text" placeholder="Your Name" />
-                <input type="email" placeholder="Your Email" />
-                <input type="tel" placeholder="Phone" />
-                <input type="text" placeholder="Your Company Name" />
-                <input type="text" placeholder="Your Company Address" />
-
-                <div style={{ display: 'flex', gap: '10px' }}>
-                  <div style={{ flex: 1 }}>
-                    <input type="text" placeholder="City" name="city" required />
-                  </div>
-                  <div style={{ flex: 1 }}>
-                    <input type="text" name="state" placeholder="State" required />
-                  </div>
-                  <div style={{ flex: 1 }}>
-                    <input type="text" name="postalCode" placeholder="ZIP Code" required />
-                  </div>
-                </div>
-
-                <input type="text" placeholder="Country" />
-
-                <textarea placeholder="Your Requirements" rows={4}></textarea>
-                <button type="submit">Submit</button>
-              </ModalForm>
-              <CloseButton onClick={handleCloseModal}>×</CloseButton>
-            </ModalContent>
-          </ModalWrapper>
-        </ModalOverlay>
-      )}
-
-      {showPDF && (
-        <ModalOverlay>
-          <PDFModalWrapper>
-            <PDFModalContent>
-              <PDFIframe src={pdfSrc} />
-            </PDFModalContent>
-            <CloseButton onClick={handleClosePDFModal}>×</CloseButton>
-          </PDFModalWrapper>
-        </ModalOverlay>
-      )}
-    </>
-  );
-};
-
-export default RMseriesProductGrid;
+  
+  export default EEseriesProductGrid;
+  

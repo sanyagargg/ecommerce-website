@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ModalForm } from './ProductGridElements';
+import './GetQuote.css';
 
 const GetQuote = ({ productTitle }) => {
   const [formData, setFormData] = useState({
@@ -12,10 +13,16 @@ const GetQuote = ({ productTitle }) => {
     state: '',
     postalCode: '',
     country: '',
-    description: ''
+    description: '',
+    productTitle: productTitle || ''  // ✅ Add product title to form data
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // Optional: update productTitle if prop changes dynamically
+  useEffect(() => {
+    setFormData((prev) => ({ ...prev, productTitle: productTitle || '' }));
+  }, [productTitle]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -29,9 +36,8 @@ const GetQuote = ({ productTitle }) => {
     e.preventDefault();
 
     const form = e.target;
-    // Ensure the form fields are validated before submission
     if (!form.checkValidity()) {
-      form.reportValidity(); // This triggers the browser validation error messages
+      form.reportValidity();
       return;
     }
 
@@ -56,7 +62,8 @@ const GetQuote = ({ productTitle }) => {
           state: '',
           postalCode: '',
           country: '',
-          description: ''
+          description: '',
+          productTitle: productTitle || '' // Reset it again just in case
         });
       } else {
         alert('Failed to submit form');
@@ -121,7 +128,6 @@ const GetQuote = ({ productTitle }) => {
           value={formData.city}
           onChange={handleInputChange}
           placeholder="City"
-         
         />
         <input
           type="text"
@@ -129,7 +135,6 @@ const GetQuote = ({ productTitle }) => {
           value={formData.state}
           onChange={handleInputChange}
           placeholder="State"
-          
         />
         <input
           type="text"
